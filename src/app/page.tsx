@@ -112,7 +112,7 @@ export default function Home() {
             {/* <img src="" alt=""/>*/}
             <div className="feature-content">
               <h3>Itinerary</h3>
-              <p>Keep activities and plans organized b</p>
+              <p>Keep activities and plans organized.</p>
               <Link href="/itinerary">View Itinerary →</Link>
             </div>
           </article>
@@ -141,13 +141,13 @@ export default function Home() {
       </section> 
 
       {/* Ready to Start your adventure */}
-      {/* <section className="ready-start">
+      <section className="ready-start">
         <h2>Ready to start your adventure?</h2>
         <p>Join RoamReady and turn your travel plans into real memories.</p>
         <div className="create-account">
           <Link href="/signup" className="signup-button">Create Your Free Account</Link>
         </div>
-      </section> */}
+      </section>
 
       {/* Footer */}
       {/* <footer className="footer">
