@@ -172,6 +172,9 @@ body {
 }
 
 /*why roamready*/ 
+.why-roamready{
+  padding: 34px 24px;
+}
 .why-roamready h2{
   font-size: 45px;
   text-align: center;

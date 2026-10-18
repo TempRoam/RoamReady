@@ -73,7 +73,7 @@ export default function Home() {
             <div className="feature-content">
               <h3>Hotels</h3>
               <p>Find stays that fit your destination.</p>
-              <Link href="">Explore Hotels  →</Link>
+              <Link href="/hotel">Explore Hotels  →</Link>
             </div>
           </article>
           
@@ -83,7 +83,7 @@ export default function Home() {
             <div className="feature-content">
               <h3>Transportation</h3>
               <p>Explore ways to get around your destination.</p>
-              <Link href="">Explore Transportation  →</Link>
+              <Link href="/transportation">Explore Transportation  →</Link>
             </div>
           </article>
 
@@ -93,7 +93,7 @@ export default function Home() {
             <div className="feature-content">
               <h3>Packages</h3>
               <p>Explore packages for your next adventure.</p>
-              <Link href="">Explore Packages  →</Link>
+              <Link href="/packages">Explore Packages  →</Link>
             </div>
           </article>
 
@@ -103,7 +103,7 @@ export default function Home() {
             <div className="feature-content">
               <h3>Budget</h3>
               <p>Track your spending and stay within your trip budget.</p>
-              <Link href="">Manage Budget →</Link>
+              <Link href="/budget">Manage Budget →</Link>
             </div>
           </article>
 
@@ -113,7 +113,7 @@ export default function Home() {
             <div className="feature-content">
               <h3>Itinerary</h3>
               <p>Keep activities and plans organized b</p>
-              <Link href="">View Itinerary →</Link>
+              <Link href="/itinerary">View Itinerary →</Link>
             </div>
           </article>
 
@@ -122,7 +122,7 @@ export default function Home() {
             {/* <img src="" alt=""/>*/}
             <div className="feature-content">
               <h3>Packing</h3>
-              <p></p>
+              <p>Build packing lists for every trip.</p>
               <Link href="">Build a Packing List →</Link>
             </div>
           </article>
@@ -132,7 +132,7 @@ export default function Home() {
             {/* <img src="" alt=""/>*/}
             <div className="feature-content">
               <h3>Safety</h3>
-              <p></p>
+              <p>Stay informed about safety concerns and common scams.</p>
               <Link href="">Explore Safety →</Link>
             </div>
           </article>
