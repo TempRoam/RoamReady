@@ -16,7 +16,7 @@ export default function hotelpage() {
                     <p>Not sure where to start? Here are popular Hotels...</p>
                 </div>
                 <div className = "hotel-japan">
-                    <!-- Add an image here-->
+                    {/* Add an image here */}
                     <h1>Hotels in Japan </h1>
                     <p></p>
                     <button type = "button"> More Details </button>
