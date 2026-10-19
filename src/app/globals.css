@@ -235,12 +235,30 @@ body {
   text-decoration: none;
 }
 
+
 /* footer */
 .ready-start {
+  background-color: #04566E;
+  background-image: url("/images/mountain.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 80px 20px;
+  background-position: center;
+  color: white;
   text-align: center;
 }
 
+.ready-start h2{
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
 
+.ready-start p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
 /* hotel page */
 
 /* hotel page */

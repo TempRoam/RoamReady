@@ -24,6 +24,7 @@ export default function Home() {
 
         <div className="hero-image"> 
           {/* Add image for hero content*/}
+          <img src="/images/hero.jpg" alt="hero image"></img>
         </div>
       </section>
 
@@ -58,7 +59,7 @@ export default function Home() {
         
         <div className="feature-grid">
           <article className="feature-card">
-            {/* <img src="" alt=""/>*/}
+            <img src="/images/flight.jpg" alt="Airplane above the clouds"></img>
             {/*flights not fights lol */}
             <div className="feature-content">
               <h3>Flights</h3>
@@ -69,7 +70,7 @@ export default function Home() {
 
         {/*Hotels*/}
         <article className="feature-card">
-            {/* <img src="" alt=""/>*/}
+            <img src="/images/hotel.jpg" alt="Hotel with a swimming pool"/>
             <div className="feature-content">
               <h3>Hotels</h3>
               <p>Find stays that fit your destination.</p>
@@ -79,7 +80,7 @@ export default function Home() {
           
         {/*Transportation*/}
         <article className="feature-card">
-            {/* <img src="" alt=""/>*/}
+            <img src="/images/transportation.jpg" alt="City train"/>
             <div className="feature-content">
               <h3>Transportation</h3>
               <p>Explore ways to get around your destination.</p>
@@ -89,7 +90,7 @@ export default function Home() {
 
         {/*Packages*/}
         <article className="feature-card">
-            {/* <img src="" alt=""/>*/}
+            <img src="/images/packages.jpg" alt="Vacation destinations"/>
             <div className="feature-content">
               <h3>Packages</h3>
               <p>Explore packages for your next adventure.</p>
@@ -99,7 +100,7 @@ export default function Home() {
 
         {/*Budget*/}
         <article className="feature-card">
-            {/* <img src="" alt=""/>*/}
+            <img src="/images/budget.jpg" alt="MNotebook for planning travel expenses"/>
             <div className="feature-content">
               <h3>Budget</h3>
               <p>Track your spending and stay within your trip budget.</p>
@@ -109,7 +110,7 @@ export default function Home() {
 
         {/*Itinerary*/}
         <article className="feature-card">
-            {/* <img src="" alt=""/>*/}
+            <img src="/images/itinerary.jpg" alt="Map used to plan trips"/>
             <div className="feature-content">
               <h3>Itinerary</h3>
               <p>Keep activities and plans organized.</p>
@@ -119,7 +120,7 @@ export default function Home() {
 
         {/*Packing*/}
         <article className="feature-card">
-            {/* <img src="" alt=""/>*/}
+            <img src="/images/packing.jpg" alt="Packing travel essentials"/>
             <div className="feature-content">
               <h3>Packing</h3>
               <p>Build packing lists for every trip.</p>
@@ -129,7 +130,7 @@ export default function Home() {
 
         {/*Safety*/}
         <article className="feature-card">
-            {/* <img src="" alt=""/>*/}
+            <img src="/images/safety.jpg" alt="Safety image"/>
             <div className="feature-content">
               <h3>Safety</h3>
               <p>Stay informed about safety concerns and common scams.</p>
@@ -141,7 +142,7 @@ export default function Home() {
       </section> 
 
       {/* Ready to Start your adventure */}
-      <section className="ready-start">
+      <section className="ready-start" id="ready-start">
         <h2>Ready to start your adventure?</h2>
         <p>Join RoamReady and turn your travel plans into real memories.</p>
         <div className="create-account">
