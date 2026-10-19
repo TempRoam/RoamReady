@@ -151,7 +151,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      {/* <footer className="footer">
+      <footer className="footer">
+        <p>Plan smarter. Travel safer.</p>
          <p>Copyright 2026 RoamReady. All rights reserved.</p>
 
          <div className="footer-links">
@@ -159,7 +160,7 @@ export default function Home() {
           <Link href="/features">Features</Link>
          </div>
 
-      </footer> */}
+      </footer>
 
 
     </main>

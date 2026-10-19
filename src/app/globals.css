@@ -235,8 +235,6 @@ body {
   text-decoration: none;
 }
 
-
-/* footer */
 .ready-start {
   background-color: #04566E;
   background-image: url("/images/mountain.jpg");
@@ -259,6 +257,35 @@ body {
   line-height: 1.6;
   margin-bottom: 28px;
 }
+
+/* footer */
+.footer {
+  background-color: #2F4538;
+  color: white;
+  padding: 32px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-links a{
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+
+}
+
 /* hotel page */
 
 /* hotel page */
@@ -331,5 +358,9 @@ body {
   .step span{
     margin-bottom: 16px;
   }
-
+  
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
 }
