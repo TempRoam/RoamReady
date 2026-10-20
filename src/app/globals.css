@@ -287,8 +287,6 @@ body {
 }
 
 /* hotel page */
-
-/* hotel page */
 .hotel {
   padding: 24px;
 }
@@ -309,7 +307,7 @@ body {
   background-color: #04566E;
   border-radius: 12px;
   border: 1px solid black;
-  padding: 10px 100px;
+  padding: 6px 100px;
 
 }
 
@@ -318,7 +316,7 @@ body {
   background-color: #ffffff;
   border-radius: 12px;
   border: 1px solid black;
-  padding: 10px 100px;
+  padding: 6px 100px;
 }
 
 /* Center Search bar  */ 
@@ -333,18 +331,36 @@ body {
 .search {
   display: flex;
   align-items: center;
-  gap: 8px;
   border: 1px solid gray;
   border-radius: 12px;
-  padding: 5px 12px;
+  padding: 6px 12px;
   background-color: white;
 }
 
-/* Hotel in Japan */
-.hotel-japan {
+.discover {
   text-align: center;
-  padding: 20px;
 }
+
+/* Hotel in Japan */
+.hotel-list {
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+
+}
+
+.hotel-card {
+  background-color: white;
+}
+
+.hotel-card img {
+  width: 480px;
+  height: 500px;
+}
+
+.hotel-content {
+  
+}
+
 
 @media (max-width: 768px) {
   .steps{flex-direction: column;
