@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import "tailwindcss";
 
+
+
 :root {
   --background: #EEF3EA;
   --foreground: #100b0b;
@@ -85,19 +87,290 @@ body {
   gap: 12px;
 }
 
-/* Sign Up page */
+.start-button{
+  color: white;
+  background-color: #2F4538;
+  padding: 8px 20px;
+  border-radius: 12px;
+}
 
-/* Sign-Up */
+.explore-button{
+  color: white;
+  background-color: #2F4538;
+  padding: 8px 20px;
+  border-radius: 12px;
+}
+
+/* Sign Up page */
 .sign-up { 
   display: flex;
   justify-content: center;
   align-items: center; 
 }
 
-/* hotel page */
-
 .hotel-image {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+
+/*how it works */
+.how-it-works {
+  padding: 60px 24px;
+  text-align: center;
+}
+
+.how-it-works h2{
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.how-it-works > p {
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+
+.steps {
+  display: flex;
+  max-width: 950px;
+  gap: 40px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.steps::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: calc((100% - 80px)/6);
+  right: calc((100% - 80px)/6);
+  height: 2px;
+  background-color: #689368;
+}
+
+.step span{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 34px;
+  border-radius: 50%;
+  background-color: #689368;
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+
+}
+
+.step {
+  flex: 1;
+  position: relative;
+  text-align: center;
+}
+
+.step h3{
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.step p {
+  font-size: 15px;
+  max-width: 250px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/*why roamready*/ 
+.why-roamready{
+  padding: 60px 24px;
+}
+
+.why-roamready h2{
+  font-size: 45px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.why-roamready > p{
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.feature-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px 32px;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.feature-card{
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.feature-card img {
+  display: block;
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.feature-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+.feature-content h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.feature-content p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.feature-content a {
+  margin-top: auto;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.ready-start {
+  background-color: #04566E;
+  background-image: url("/images/mountain.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 80px 20px;
+  background-position: center;
+  color: white;
+  text-align: center;
+}
+
+.ready-start h2{
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.ready-start p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+/* footer */
+.footer {
+  background-color: #2F4538;
+  color: white;
+  padding: 32px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-links a{
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+
+}
+
+/* hotel page */
+.hotel {
+  padding: 24px;
+}
+
+/* Makes Button go to center and has a gap*/
+.hotel-title {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button styles */
+.hotel-button {
+  color: white;
+  background-color: #04566E;
+  border-radius: 12px;
+  border: 1px solid black;
+  padding: 10px 100px;
+
+}
+
+.flights-button {
+  color: black;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid black;
+  padding: 10px 100px;
+}
+
+/* Center Search bar  */ 
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Search bar styles */
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid gray;
+  border-radius: 12px;
+  padding: 5px 12px;
+  background-color: white;
+}
+
+/* Hotel in Japan */
+.hotel-japan {
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .steps{flex-direction: column;
+    gap: 36px;
+  }
+  
+  .steps::before {
+    display: none;
+  }
+
+  .step span{
+    margin-bottom: 16px;
+  }
+  
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
 }

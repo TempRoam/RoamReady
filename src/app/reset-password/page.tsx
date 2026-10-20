@@ -1,8 +1,8 @@
 export default function ResetPasswordPage() {
     return (
          <main>
-            <section className = "rest">
-                <div className = "rest-password">
+            <section className="rest">
+                <div className="rest-password">
                     <h1>Reset Password</h1>
                     <form>
                         <input type="email" placeholder="Email" />
@@ -10,6 +10,6 @@ export default function ResetPasswordPage() {
                     </form>
                 </div>
             </section>
-        </main> 
+        </main>
     );
 }
