@@ -3,7 +3,7 @@
 import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { createClient } from '@/utils/supabase/server'
-import { cookies } from 'next/headers'
+import { cookies, headers } from 'next/headers'
 
 export async function login(formData: FormData) {
   const cookieStore = await cookies()
@@ -57,4 +57,29 @@ export async function signup(formData: FormData) {
 
   revalidatePath('/', 'layout')
   redirect('/')
+}
+
+export async function signInWithGoogle() {
+  const cookieStore = await cookies()
+  const supabase = createClient(cookieStore)
+
+  const headerList = await headers()
+  const host = headerList.get('x-forwarded-host') || headerList.get('host')
+  const proto = headerList.get('x-forwarded-proto') || 'http'
+  const origin = headerList.get('origin') || (host ? `${proto}://${host}` : 'http://localhost:3000')
+
+  const { data, error } = await supabase.auth.signInWithOAuth({
+    provider: 'google',
+    options: {
+      redirectTo: `${origin}/auth/callback`,
+    },
+  })
+
+  if (error) {
+    redirect('/login?error=Could not authenticate with Google')
+  }
+
+  if (data?.url) {
+    redirect(data.url)
+  }
 }
