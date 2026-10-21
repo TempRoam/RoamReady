@@ -7,20 +7,20 @@ export default function flights() {
             {/* Title */ }
             <section className = "flight">
                 <div className = "flight-title">
-                <form className = "form">
-                    <div className = "search">
+                <form className = "flight-form">
+                    <div className = "flight-search">
                         <span className= "search-icon material-symbols-outlined"> search </span>
                         <input className = "search-input" type = "search" placeholder = "Search"/>
                     </div>
                 </form>
                     { /* <h1 className = "roam"> RoamReady </h1> */}
-                    <Link href="/flights" className="flights-button">Flights</Link>
-                    <Link href="/hotel" className="hotel-button">Hotel</Link>
+                    <Link href="/flights" className="flightTwo-button">Flights</Link>
+                    <Link href="/hotel" className="hotelTwo-button">Hotel</Link>
                     { /* <button type = "button"> Flights </button> 
                       <button type = "button"> Hotel </button> */}
                 </div>           
 
-                <div className = "discover">
+                <div className = "Area">
                     <p>Not sure where to start? Here are popular Flights...</p>
                 </div>
             </section>

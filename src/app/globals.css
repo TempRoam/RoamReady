@@ -384,6 +384,10 @@ body {
 
 /* Flights */
 
+.flight {
+  padding: 24px;
+}
+
 .flight-title {
   margin-bottom: 20px;
   display: flex;
@@ -391,6 +395,45 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hotelTwo-button {
+  color: white;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid black;
+  padding: 6px 100px;
+
+}
+
+.flightTwo-button {
+  color: black;
+  background-color: #04566E;
+  border-radius: 12px;
+  border: 1px solid black;
+  padding: 6px 100px;
+}
+
+/* Center Search bar  */ 
+.flight-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Search bar styles */
+.flight-search {
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  border-radius: 12px;
+  padding: 6px 12px;
+  background-color: white;
+}
+
+.Area {
+  text-align: center;
 }
 
 .flight-grid{
