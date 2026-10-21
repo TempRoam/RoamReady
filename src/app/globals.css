@@ -345,23 +345,42 @@ body {
 .hotel-list {
   display: grid;
   grid-template-rows: repeat(1, 1fr);
+  gap: 24px;
 
 }
 
 .hotel-card {
   background-color: white;
+  display: flex;
 }
 
 .hotel-card img {
-  width: 480px;
+  width: 600px;
   height: 500px;
+  object-fit: cover;
 }
 
-.hotel-content {
+.hotel-content h1 {
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 5px;
+  margin-bottom: 8px;
   
 }
 
+.hotel-content p {
+  padding-left: 5px;
+}
 
+.hotel-content button {
+  position: relative;
+  top: 388px;
+  left: 770px;
+  background-color: #2F4538;
+  border: 5px solid #689368;
+  color: #689368;
+  padding: 5px;
+}
 @media (max-width: 768px) {
   .steps{flex-direction: column;
     gap: 36px;
