@@ -1,6 +1,7 @@
 import { signup } from '../login/actions' //the account is created by the signup server action in, ../login/action.ts, whcih talks to supabase
 import styles from './signup.module.css' //for this page only, this isn't connected to the global.css
 import SubmitButton from './SubmitButton' //"create" button, disbales while submitting
+import { signInWithGoogle } from '../auth/actions'
 
 export default async function SignupPage(props: { searchParams: Promise<{ error?: string }> }) {
     //searchParams is a Promise, has to be awaited before reading from it
@@ -29,6 +30,14 @@ export default async function SignupPage(props: { searchParams: Promise<{ error?
             <SubmitButton className={styles.button} pendingText="Create Account..">Create</SubmitButton>
 
           </form>
+
+<p className={styles.divider}>or</p>
+<form action={signInWithGoogle}>
+  <SubmitButton className={styles.googleButton} pendingText="Loading Google...">
+    Continue with Google
+    </SubmitButton>
+    </form>
+
 
      </main>
     )
