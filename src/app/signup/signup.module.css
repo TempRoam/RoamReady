@@ -64,3 +64,30 @@
     outline: 2px solid var(--green-dark);
     outline-offset: 1px;
 }
+
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    color: var(--text);
+}
+
+.googleButton {
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--green-border);
+    border-radius: 5px;
+    background: #ffffff;
+    color: #1f1f1f;
+    font: inherit;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.googleButton:hover {
+    opacity: 0.9;
+}
+
+.googleButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
