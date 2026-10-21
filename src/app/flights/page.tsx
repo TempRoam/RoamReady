@@ -88,3 +88,4 @@ export default function flights() {
         </main>
     )
 }
+export { default } from './flights';

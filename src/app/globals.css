@@ -101,6 +101,19 @@ body {
   border-radius: 12px;
 }
 
+/* Sign Up page */
+.sign-up { 
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.hotel-image {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 /*how it works */
 .how-it-works {
   padding: 60px 24px;
@@ -296,7 +309,6 @@ body {
   margin-bottom: 20px;
   display: flex;
   gap: 12px;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
