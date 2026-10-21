@@ -7,7 +7,7 @@ export default function flights() {
             {/* Title */ }
             <section className = "flight">
                 <div className = "flight-title">
-                    <form className = "form">
+                <form className = "form">
                     <div className = "search">
                         <span className= "search-icon material-symbols-outlined"> search </span>
                         <input className = "search-input" type = "search" placeholder = "Search"/>
@@ -20,7 +20,7 @@ export default function flights() {
                       <button type = "button"> Hotel </button> */}
                 </div>           
 
-                <div className = "area">
+                <div className = "discover">
                     <p>Not sure where to start? Here are popular Flights...</p>
                 </div>
             </section>

@@ -385,6 +385,57 @@ body {
   color: #689368;
   padding: 5px;
 }
+
+/* Flights */
+
+.flight-title {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flight-grid{
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.flight-card {
+  background-color: white;
+  display: flex;
+}
+
+.flight-card img {
+  width: 600px;
+  height: 500px;
+  object-fit: cover;
+}
+
+.flight-content h1 {
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 5px;
+  margin-bottom: 8px;
+  
+}
+
+.flight-content p {
+  padding-left: 5px;
+}
+
+.flight-content button {
+  position: relative;
+  top: 388px;
+  left: 770px;
+  background-color: #2F4538;
+  border: 5px solid #689368;
+  color: #689368;
+  padding: 5px;
+}
+
 @media (max-width: 768px) {
   .steps{flex-direction: column;
     gap: 36px;

@@ -7,7 +7,7 @@ export default function hotelpage() {
             {/* Title */ }
             <section className = "hotel">
                 <div className = "hotel-title">
-                    <form className = "form">
+                <form className = "form">
                     <div className = "search">
                         <span className= "search-icon material-symbols-outlined"> search </span>
                         <input className = "search-input" type = "search" placeholder = "Search"/>
