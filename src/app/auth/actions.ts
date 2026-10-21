@@ -8,9 +8,9 @@ export async function signInWithGoogle() {
     const cookieStore = await cookies()
     const supabase = createClient(cookieStore)
 
-    const origin = await headers()).get('origin')
+    const origin = (await headers()).get('origin')
 
-    const { data, console.error } = await supabase.auth.signInWithOAuth({
+    const { data, error } = await supabase.auth.signInWithOAuth({
         provider: 'google',
         options: { redirectTo: '${origin}/auth/callback' },
     })
