@@ -33,7 +33,9 @@ export default function hotelpage() {
                         <img src="/images/JapanHotel.jpg" alt = "Japan Hotel" />
                         <div className="hotel-content">
                             <h1>Hotels in Japan </h1>
-                            <p>Features tatami mats, sliding doors, low tables and includes onsen (hot spring) and multi-course kaiseki dining.</p>
+                            <p>Features tatami mats, sliding doors, low tables and 
+                            includes onsen (hot spring) and multi-course kaiseki dining.
+                            Features 2 bedrooms, great dining, and exceptional service.</p>
                             <button type = "button"> More Details </button>
                         </div>
                     </article>
