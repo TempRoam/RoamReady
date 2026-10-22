@@ -69,6 +69,15 @@ export default function communities() {
                     </article>
                 </div>
             </section>
+
+            {/* footer */ }
+            <footer className="footer">
+                <p>Copyright 2026 RoamReady. All rights reserved.</p>
+                <div className="footer-links">
+                    <Link href="/about">About</Link>
+                    <Link href="/features">Features</Link>
+                </div>
+            </footer>
         </main>
     )
 }
