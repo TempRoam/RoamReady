@@ -487,6 +487,56 @@ body {
   padding: 5px;
 }
 
+/* cummunities page */
+.communities {
+  padding: 24px;
+}
+
+/* Makes Button go to center and has a gap*/
+.communities-title {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.communities-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Search bar styles */
+.communities-search {
+  display: flex;
+  border: 1px solid gray;
+  border-radius: 12px;
+  padding: 6px 150px;
+  background-color: white;
+}
+
+.communities-grid{
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.communities-card {
+  background-color: white;
+  display: flex;
+}
+
+.communities-content h1 {
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 5px;
+}
+
+.communities-content p {
+  padding-left: 5px;
+}
+
 @media (max-width: 768px) {
   .steps{flex-direction: column;
     gap: 36px;
