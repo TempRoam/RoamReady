@@ -1,4 +1,5 @@
 import { login } from './actions'
+import Link from 'next/link'; //forgot pass added + line 30
 //resuing styles and button from sign up
 //the login process happens in the login server action in ./action.ts
 import { signInWithGoogle } from '../auth/actions' 
@@ -25,6 +26,8 @@ export default async function LoginPage(props: { searchParams: Promise<{ error?:
              <label htmlFor="password" className={styles.label}>Password</label>
             <input id="password" type="password" name="password" placeholder=" enter password" required
             autoComplete="current password" className={styles.input} />
+            
+            <Link href="/reset-password" className={styles.forgotLink}>Forgot password?<Link>
 
             <SubmitButton className={styles.button} pendingText="Get Roam Ready!..">Log In</SubmitButton>
           </form>
