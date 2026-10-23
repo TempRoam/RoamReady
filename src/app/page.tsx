@@ -3,6 +3,7 @@
 import Link from "next/link";
 
 export default function Home() {
+  {/*add const[currentImage, setCurrent] and useEffect*/}
   return (
     <main>
       <section className="hero">
