@@ -91,3 +91,15 @@
     opacity: 0.5;
     cursor: not-allowed;
 }
+
+.forgotLink {
+    align-self: flex-end;
+    margin-top: -10px;
+    font-size: 0.85;
+    color: var(--green-dark);
+    text-decoration: underline;
+}
+
+.forgotLink:hover {
+    opacity: 0.8;
+}
