@@ -27,7 +27,7 @@ export default async function LoginPage(props: { searchParams: Promise<{ error?:
             <input id="password" type="password" name="password" placeholder=" enter password" required
             autoComplete="current password" className={styles.input} />
             
-            <Link href="/reset-password" className={styles.forgotLink}>Forgot password?<Link>
+            <Link href="/reset-password" className={styles.forgotLink}>Forgot password?</Link>
 
             <SubmitButton className={styles.button} pendingText="Get Roam Ready!..">Log In</SubmitButton>
           </form>
