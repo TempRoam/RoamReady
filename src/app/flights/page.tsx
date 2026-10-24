@@ -47,7 +47,8 @@ export default function flights() {
                         <div className="flight-content">
                             <h1>Flights to France </h1>
                             <p>Want to go to an awesome adventure in France? 
-                                You can see cool scenery like Eiffel tower and Louvre Museum.</p>
+                                You can see cool scenery like Eiffel tower and Louvre Museum. France is known for its art, 
+                                culture, and delicious cuisine.</p>
                             <button type = "button"> More Details </button>
                         </div>
                     </article>

@@ -465,6 +465,12 @@ body {
   object-fit: cover;
 }
 
+.flight-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .flight-content h1 {
   font-size: 24px;
   font-weight: bold;
@@ -478,9 +484,8 @@ body {
 }
 
 .flight-content button {
-  position: relative;
-  top: 388px;
-  left: 770px;
+  margin-top: auto;
+  align-self: flex-end;
   background-color: #2F4538;
   border: 5px solid #689368;
   color: #689368;
