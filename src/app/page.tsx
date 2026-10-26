@@ -1,5 +1,3 @@
-{/* add use client to add the imports and image lists */}
-
 import Link from "next/link";
 
 export default function Home() {
