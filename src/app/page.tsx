@@ -3,7 +3,6 @@
 import Link from "next/link";
 
 export default function Home() {
-  {/*add const[currentImage, setCurrent] and useEffect*/}
   return (
     <main>
       <section className="hero">
@@ -24,9 +23,14 @@ export default function Home() {
           </div>
         </div>          {/* End of Hero content */}
 
-        <div className="hero-image"> 
+        <div className="hero-image" role="img" aria-label="Travel destinations featuring hiking, national parks, resorts, and hotels">
+        
           {/* Add image for hero content*/}
-          <img src="/images/hero.jpg" alt="hero image"></img>
+          <img className="hero-slide"  src="/images/hiking.jpg" alt="hiking image"/>
+          <img className="hero-slide"  src="/images/outdoor.jpg" alt="outdoor image"/>
+          <img className="hero-slide" src="/images/France.jpg" alt="France image" />
+          <img className="hero-slide" src="/images/Mexico.jpg" alt="Mexico image"/>
+
         </div>
       </section>
 
