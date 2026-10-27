@@ -593,7 +593,7 @@ body {
 }
 
 .communities-card {
-  background-color: white;
+  background-color: rgb(194, 194, 194);
   display: flex;
 }
 
