@@ -618,7 +618,7 @@ body {
 
 .check-email-content {
   text-align: center;
-  margin: 0, auto;
+  margin: 0 auto;
 }
 
 .email{
@@ -629,22 +629,27 @@ body {
   font-size: large;
   font-weight: 800;
   color: #555555;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .email p{
 
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 
 .back-to-login-button {
   background-color: #2f4538;
   color: white;
-  padding: 10px 110px;
+  padding: 10px 110px;  
 }
 
 
+.email-divider {
+  border:0;
+  border-top: 1px solid #04566E;
+  margin: 32px 0 ;
+}
 
 @media (max-width: 768px) {
   .steps{flex-direction: column;

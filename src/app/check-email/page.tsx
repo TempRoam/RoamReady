@@ -9,7 +9,7 @@ export default function CheckEmailPage() {
                         <p>If an account exists for this email, you'll receive a link to reset your password.</p>
                         <Link href="/login" className="back-to-login-button">Back to Login</Link>
                     </div>
-                    <hr className= "border-width: 15px" />
+                    <hr className= "email-divider" />
                     <div className = "receive">
                         <p>Didn't receive an email? Check your spam folder.</p>
                         <p>Resend reset link</p>
