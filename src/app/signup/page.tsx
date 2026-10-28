@@ -1,7 +1,7 @@
 import { signup } from '../login/actions'
 import styles from './signup.module.css'
 import SubmitButton from './SubmitButton'
-import { signInWithGoogle } from '../auth/actions'
+import GoogleSignInButton from '@/components/auth/GoogleSignInButton'
 import { createClient } from '@/utils/supabase/server'
 import { cookies } from 'next/headers'
 import { redirect } from 'next/navigation'
@@ -40,14 +40,8 @@ export default async function SignupPage(props: { searchParams: Promise<{ error?
 
           </form>
 
-<p className={styles.divider}>or</p>
-<form action={signInWithGoogle}>
-  <SubmitButton className={styles.googleButton} pendingText="Loading Google...">
-    Continue with Google
-    </SubmitButton>
-    </form>
-
-
+          <p className={styles.divider}>or</p>
+          <GoogleSignInButton className={styles.googleButton} />
      </main>
     )
 }
