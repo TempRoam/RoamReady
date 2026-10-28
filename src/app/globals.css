@@ -430,6 +430,12 @@ body {
   object-fit: cover;
 }
 
+.hotel-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
 .hotel-content h1 {
   font-size: 24px;
   font-weight: bold;
@@ -443,9 +449,8 @@ body {
 }
 
 .hotel-content button {
-  position: relative;
-  top: 388px;
-  left: 770px;
+  margin-top: auto;
+  align-self: flex-end;
   background-color: #2F4538;
   border: 5px solid #689368;
   color: #689368;
@@ -560,7 +565,7 @@ body {
   margin-bottom: 20px;
   display: flex;
   gap: 12px;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
@@ -575,18 +580,20 @@ body {
   display: flex;
   border: 1px solid gray;
   border-radius: 12px;
-  padding: 6px 150px;
+  padding: 6px 12px;
   background-color: white;
 }
 
 .communities-grid{
   display: grid;
   grid-template-rows: repeat(1, 1fr);
+  width: 50%;
+  margin: auto;
   gap: 20px;
 }
 
 .communities-card {
-  background-color: white;
+  background-color: rgb(194, 194, 194);
   display: flex;
 }
 
