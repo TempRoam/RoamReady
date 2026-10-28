@@ -1,8 +1,20 @@
-{/* add use client to add the imports and image lists */}
-
 import Link from "next/link";
+import { redirect } from "next/navigation";
+import { createClient } from "@/utils/supabase/server";
+import { cookies } from "next/headers";
 
-export default function Home() {
+export default async function Home(props: { searchParams?: Promise<{ code?: string }> }) {
+  const searchParams = props.searchParams ? await props.searchParams : undefined;
+  if (searchParams?.code) {
+    redirect(`/auth/callback?code=${searchParams.code}`);
+  }
+
+  const cookieStore = await cookies();
+  const supabase = createClient(cookieStore);
+  const { data: { user } } = await supabase.auth.getUser();
+
+  const startPlanningHref = user ? "/features" : "/signup";
+
   return (
     <main>
       <section className="hero">
@@ -18,7 +30,7 @@ export default function Home() {
           <p>From your first idea to your final itinerary, RoamReady keeps your trip organized in one place. </p>
           
           <div className="hero-actions" >
-            <Link href="/signup" className="start-button">Start Planning</Link>
+            <Link href={startPlanningHref} className="start-button">Start Planning</Link>
             <Link href="/features" className="explore-button">Explore Features</Link>
           </div>
         </div>          {/* End of Hero content */}
@@ -152,7 +164,9 @@ export default function Home() {
         <h2>Ready to start your adventure?</h2>
         <p>Join RoamReady and turn your travel plans into real memories.</p>
         <div className="create-account">
-          <Link href="/signup" className="signup-button">Create Your Free Account</Link>
+          <Link href={user ? "/features" : "/signup"} className="signup-button">
+            {user ? "Go to Dashboard" : "Create Your Free Account"}
+          </Link>
         </div>
       </section>
 

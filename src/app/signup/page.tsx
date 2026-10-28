@@ -1,12 +1,21 @@
-import { signup } from '../login/actions' //the account is created by the signup server action in, ../login/action.ts, whcih talks to supabase
-import styles from './signup.module.css' //for this page only, this isn't connected to the global.css
-import SubmitButton from './SubmitButton' //"create" button, disbales while submitting
+import { signup } from '../login/actions'
+import styles from './signup.module.css'
+import SubmitButton from './SubmitButton'
 import { signInWithGoogle } from '../auth/actions'
+import { createClient } from '@/utils/supabase/server'
+import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
 
 export default async function SignupPage(props: { searchParams: Promise<{ error?: string }> }) {
-    //searchParams is a Promise, has to be awaited before reading from it
+    const cookieStore = await cookies()
+    const supabase = createClient(cookieStore)
+    const { data: { user } } = await supabase.auth.getUser()
+    if (user) {
+        redirect('/')
+    }
+
     const searchParams = await props.searchParams
-    const errorMessage = searchParams?.error //reading without await would throw an error
+    const errorMessage = searchParams?.error
 
     return (
         <main className={styles.page}>

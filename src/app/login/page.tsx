@@ -1,18 +1,24 @@
 import { login } from './actions'
-import Link from 'next/link'; //forgot pass added + line 30
-//resuing styles and button from sign up
-//the login process happens in the login server action in ./action.ts
+import Link from 'next/link';
 import { signInWithGoogle } from '../auth/actions' 
 import styles from '../signup/signup.module.css' 
 import SubmitButton from '../signup/SubmitButton' 
+import { createClient } from '@/utils/supabase/server'
+import { cookies } from 'next/headers'
+import { redirect } from 'next/navigation'
 
 export default async function LoginPage(props: { searchParams: Promise<{ error?: string }> }) {
-    const searchParams = await props.searchParams
-    const errorMessage = searchParams?.error //reading without await would throw an error
-    //code changed to similar to signup but use autoComplete so the browser can offer to fill it in(or hopefully suggest something for the user)
-    //no fullName since its not signing up, its logging in 
-    return (
+    const cookieStore = await cookies()
+    const supabase = createClient(cookieStore)
+    const { data: { user } } = await supabase.auth.getUser()
+    if (user) {
+        redirect('/')
+    }
 
+    const searchParams = await props.searchParams
+    const errorMessage = searchParams?.error
+
+    return (
         <main className={styles.page}>
           <h1 className={styles.title}>Log in</h1>
 
