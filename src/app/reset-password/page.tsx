@@ -1,3 +1,7 @@
+import { cookies, headers } from 'next/headers' 
+import { redirect } from 'next/navigation' 
+import { createClient } from '@utils/supabase/server' 
+
 export default function ResetPasswordPage() {
     return (
          <main>
