@@ -38,6 +38,24 @@ export default function hotelpage() {
                             Features 2 bedrooms, great dining, and exceptional service.</p>
                             <button type = "button"> More Details </button>
                         </div>
+                        {/*GRID FOR HOTEL RECOMMENDATIONS*/}
+                        <section className="hotel">
+                            <h2>Hotel Recommendations:</h2>
+                            <article className="hotel-grid">
+                                {/* <img>INSERT HOTEL IMAGE</img> */}
+                                <div className="hotel-content">
+                                    <h3>Hotel 1</h3>
+                                </div>
+
+                                <div className="hotel-content">
+                                    <h3>Hotel 2</h3>
+                                </div>
+
+                                <div className="hotel-content">
+                                    <h3>Hotel 3</h3>
+                                </div>
+                            </article>
+                        </section>
                     </article>
 
                     {/* France Hotel */}
