@@ -37,9 +37,8 @@ export default function hotelpage() {
                             includes onsen (hot spring) and multi-course kaiseki dining.
                             Features 2 bedrooms, great dining, and exceptional service.</p>
                             <button type = "button"> More Details </button>
-                        </div>
-                        {/*GRID FOR HOTEL RECOMMENDATIONS*/}
-                        <section className="hotelrecommendation">
+                            {/*GRID FOR HOTEL RECOMMENDATIONS*/}
+                            <section className="hotelrecommendation">
                             <h2>Hotel Recommendations:</h2>
                             <article className="recommendation-grid">
                                 {/* <img>INSERT HOTEL IMAGE</img> */}
@@ -56,6 +55,9 @@ export default function hotelpage() {
                                 </div>
                             </article>
                         </section>
+                        </div>
+                        
+                        
                     </article>
 
                     {/* France Hotel */}
