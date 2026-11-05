@@ -36,10 +36,11 @@ export default function hotelpage() {
                             <p>Features tatami mats, sliding doors, low tables and 
                             includes onsen (hot spring) and multi-course kaiseki dining.
                             Features 2 bedrooms, great dining, and exceptional service.</p>
-                            <button type = "button"> More Details </button>
+                            
                             {/*GRID FOR HOTEL RECOMMENDATIONS*/}
                             <section className="hotelrecommendation">
                             <h2>Hotel Recommendations:</h2>
+                            
                             <article className="recommendation-grid">
                                 {/* <img>INSERT HOTEL IMAGE</img> */}
                                 <div className="recommendation-content">
@@ -54,7 +55,9 @@ export default function hotelpage() {
                                     <h3>Hotel 3</h3>
                                 </div>
                             </article>
+
                         </section>
+                        <button type = "button"> More Details </button>
                         </div>
                         
                         
