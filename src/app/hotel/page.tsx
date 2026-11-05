@@ -39,19 +39,19 @@ export default function hotelpage() {
                             <button type = "button"> More Details </button>
                         </div>
                         {/*GRID FOR HOTEL RECOMMENDATIONS*/}
-                        <section className="hotel">
+                        <section className="hotelrecommendation">
                             <h2>Hotel Recommendations:</h2>
-                            <article className="hotel-grid">
+                            <article className="recommendation-grid">
                                 {/* <img>INSERT HOTEL IMAGE</img> */}
-                                <div className="hotel-content">
+                                <div className="recommendation-content">
                                     <h3>Hotel 1</h3>
                                 </div>
 
-                                <div className="hotel-content">
+                                <div className="recommendation-content">
                                     <h3>Hotel 2</h3>
                                 </div>
 
-                                <div className="hotel-content">
+                                <div className="recommendation-content">
                                     <h3>Hotel 3</h3>
                                 </div>
                             </article>
