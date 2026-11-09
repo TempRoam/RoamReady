@@ -13,17 +13,22 @@ export async function requestPasswordReset(formData: FormData) {
 
     }
     
-    const
-    const
-    const
+    const cookieStore = await cookies()
+    const supabase = createClient(cookieStore)
+    const origin = (await headers()).get('origin')
 
-    const
-
-    //redirectTo
+    const { error } = await supabase.auth.requestPasswordForEmail(email, {
+         //redirectTo
+        redirectTo: '${origin}/auth/callback?next=/update-password', //where the link will send the user and the callback route signs them in, then forwards them to ?next=.....
+    })
     //if(error)
     //redirect
+    if (error) {
+        redirect('/reset-password?error=${encodeURIComponent('Link could not send. Please try again later.')}')
+    }
 
     //redirect
+    redirect('/reset-password?message=${encodeURIComponent('If an account exists, a reset link has been sent.')}')
 }
 
 
