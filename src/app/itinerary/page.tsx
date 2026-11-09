@@ -4,7 +4,7 @@ import "./itinerary.css";
 export default function ItineraryPage() {
     return (
         <main className="itinerary-page">
-        {/*Trip Heading*/}
+        {/*Trip Heading and hero image*/}
         <section className="trip-hero">
             <div className="trip-content">
                 <p className="trip-destination">TOKYO, JAPAN</p>
@@ -20,7 +20,7 @@ export default function ItineraryPage() {
             </div>
             
             <img
-             className="tip-hero-image"
+             className="trip-hero-image"
              src="/images/tokyo-hero.jpg"
              alt="Mount Fuji and a Japanese pagoda"
             /> 
@@ -175,7 +175,8 @@ export default function ItineraryPage() {
                     <Link href="/budget" className="view-budget-link">View Budget <span aria-hidden="true">→</span></Link>
                 </section>
 
-                <section>
+                {/*route map placeholder*/}
+                <section className="daily-route">
                     <h2>Daily route - May 12</h2>
                     <img className="route-map" src="/images/tokyo-map.jpg"/>
                 </section>
