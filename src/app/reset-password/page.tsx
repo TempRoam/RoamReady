@@ -5,9 +5,9 @@
 //resuses the signup page styles so it matches throughout the pages
 //for this page made ./reset-password.module.css for its styles
 import Link from 'next/link'
-import { requestPasswordReset } from './actions'
+import { requestPasswordReset } from './action'
 import styles from '../signup/signup.module.css'
-import local from '.reset-password.module.css'
+import local from './reset-password.module.css'
 import SubmitButton from '../signup/SubmitButton'
 
 //so it can be async, searchParams is a promise in Next.js and has tot be awaited...
