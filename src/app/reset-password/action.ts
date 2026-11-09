@@ -9,8 +9,7 @@ export async function requestPasswordReset(formData: FormData) {
     const email = ((formData.get('email') as string) ?? '').trim()
 
     if (!email) {
-        redirect('/reset-password?error=${encodeURIComponent('Please enter your email here')}')
-
+        redirect(`/reset-password?error=${encodeURIComponent('Please enter your email')}`)
     }
     
     const cookieStore = await cookies()
@@ -19,16 +18,16 @@ export async function requestPasswordReset(formData: FormData) {
 
     const { error } = await supabase.auth.requestPasswordForEmail(email, {
          //redirectTo
-        redirectTo: '${origin}/auth/callback?next=/update-password', //where the link will send the user and the callback route signs them in, then forwards them to ?next=.....
+        redirectTo: `${origin}/auth/callback?next=/update-password`, //where the link will send the user and the callback route signs them in, then forwards them to ?next=.....
     })
     //if(error)
     //redirect
     if (error) {
-        redirect('/reset-password?error=${encodeURIComponent('Link could not send. Please try again later.')}')
+        redirect(`/reset-password?error=${encodeURIComponent('Link could not send. Please try again later.')}`)
     }
 
     //redirect
-    redirect('/reset-password?message=${encodeURIComponent('If an account exists, a reset link has been sent.')}')
+    redirect(`/reset-password?message=${encodeURIComponent('If an account exists, a reset link has been sent.')}`)
 }
 
 
