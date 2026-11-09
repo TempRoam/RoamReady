@@ -3,7 +3,7 @@
 //using form on the reset pass page
 import { cookies, headers } from 'next/headers' 
 import { redirect } from 'next/navigation' 
-import { createClient } from '@utils/supabase/server' 
+import { createClient } from '@/utils/supabase/server' 
 
 export async function requestPasswordReset(formData: FormData) {
     const email = ((formData.get('email') as string) ?? '').trim()
