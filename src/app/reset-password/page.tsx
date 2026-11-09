@@ -24,7 +24,12 @@ export default async function ResetPasswordPage(props: {
 
             <form action={requestPasswordReset} className={styles.form}>
                 <label htmlFor="email" className={styles.label}>Email</label>
-                <input id="email" className={styles.input} />
+                <input id="email" 
+                name="email"
+                type="email"
+                required
+                className={styles.input}
+                 />
 
                 <SubmitButton className={local.sendButton} pendingText="Sending...">Send Link</SubmitButton>
                 </form>
