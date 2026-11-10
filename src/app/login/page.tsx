@@ -1,45 +1,92 @@
-import { login } from './actions'
-import Link from 'next/link';
-import styles from '../signup/signup.module.css' 
-import SubmitButton from '../signup/SubmitButton' 
-import GoogleSignInButton from '@/components/auth/GoogleSignInButton'
-import { createClient } from '@/utils/supabase/server'
-import { cookies } from 'next/headers'
-import { redirect } from 'next/navigation'
+"use client";
 
-export default async function LoginPage(props: { searchParams: Promise<{ error?: string }> }) {
-    const cookieStore = await cookies()
-    const supabase = createClient(cookieStore)
-    const { data: { user } } = await supabase.auth.getUser()
-    if (user) {
-        redirect('/')
+import Link from "next/link";
+import { FormEvent, useState } from "react";
+import { supabase } from "@/lib/supabase";
+
+export default function LoginPage() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
+
+  async function handleLogin(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setMessage("");
+
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+
+    if (error) {
+      setMessage(error.message);
+      return;
     }
 
-    const searchParams = await props.searchParams
-    const errorMessage = searchParams?.error
+    window.location.href = "/";
+  }
 
-    return (
-        <main className={styles.page}>
-          <h1 className={styles.title}>Log in</h1>
+  async function handleGoogleLogin() {
+    setMessage("");
 
-          {errorMessage && ( <p className={styles.error} role="alert">{errorMessage}</p> ) }
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo: `${window.location.origin}/`,
+      },
+    });
 
-          <form action={login} className={styles.form}>
-            <label htmlFor="email" className={styles.label}>Email</label>
-            <input id="email" type="email" name="email" placeholder="roamready@abc.com" required
-            autoComplete="email" className={styles.input} />
+    if (error) {
+      setMessage(error.message);
+    }
+  }
 
-             <label htmlFor="password" className={styles.label}>Password</label>
-            <input id="password" type="password" name="password" placeholder=" enter password" required
-            autoComplete="current password" className={styles.input} />
-            
-            <Link href="/reset-password" className={styles.forgotLink}>Forgot password?</Link>
+  return (
+    <main className="login-page">
+      <section className="login-card">
+        <h1>Log In</h1>
 
-            <SubmitButton className={styles.button} pendingText="Get Roam Ready!..">Log In</SubmitButton>
-          </form>
+        <form onSubmit={handleLogin}>
+          <label htmlFor="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="roamready@abc.com"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            required
+          />
 
-          <p className={styles.divider}>or</p>
-          <GoogleSignInButton className={styles.googleButton} />
-     </main>
-    )
+          <label htmlFor="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            placeholder="enter password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+            required
+          />
+
+          <button type="submit">Log In</button>
+        </form>
+
+        <Link href="/reset-password" className="forgot-link">
+          Forgot your password?
+        </Link>
+
+        <div className="login-divider">or</div>
+
+        <button
+          type="button"
+          className="google-button"
+          onClick={handleGoogleLogin}
+        >
+          <span className="google-icon">G</span>
+          Continue with Google
+        </button>
+
+        {message && <p className="login-message">{message}</p>}
+      </section>
+    </main>
+  );
 }

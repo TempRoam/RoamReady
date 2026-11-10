@@ -22,7 +22,7 @@ export async function login(formData: FormData) {
   })
 
   if (error) {
-    redirect(`/login?error=${encodeURIComponent(error.message)}`)
+    redirect('/login?error=Could not authenticate user')
   }
 
   revalidatePath('/', 'layout')
@@ -52,7 +52,7 @@ export async function signup(formData: FormData) {
   })
 
   if (error) {
-    redirect(`/signup?error=${encodeURIComponent(error.message)}`)
+    redirect('/signup?error=Could not sign up user')
   }
 
   revalidatePath('/', 'layout')
@@ -82,12 +82,4 @@ export async function signInWithGoogle() {
   if (data?.url) {
     redirect(data.url)
   }
-}
-
-export async function signout() {
-  const cookieStore = await cookies()
-  const supabase = createClient(cookieStore)
-  await supabase.auth.signOut()
-  revalidatePath('/', 'layout')
-  redirect('/login')
 }

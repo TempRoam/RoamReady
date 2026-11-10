@@ -1,47 +1,105 @@
-import { signup } from '../login/actions'
-import styles from './signup.module.css'
-import SubmitButton from './SubmitButton'
-import GoogleSignInButton from '@/components/auth/GoogleSignInButton'
-import { createClient } from '@/utils/supabase/server'
-import { cookies } from 'next/headers'
-import { redirect } from 'next/navigation'
+"use client";
 
-export default async function SignupPage(props: { searchParams: Promise<{ error?: string }> }) {
-    const cookieStore = await cookies()
-    const supabase = createClient(cookieStore)
-    const { data: { user } } = await supabase.auth.getUser()
-    if (user) {
-        redirect('/')
+import { FormEvent, useState } from "react";
+import { supabase } from "@/lib/supabase";
+
+export default function SignupPage() {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
+
+  async function handleSignup(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setMessage("");
+
+    const { error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: {
+          full_name: fullName,
+        },
+      },
+    });
+
+    if (error) {
+      setMessage(error.message);
+      return;
     }
 
-    const searchParams = await props.searchParams
-    const errorMessage = searchParams?.error
+    setMessage(
+      "Account created. Please check your email to confirm your account."
+    );
+  }
 
-    return (
-        <main className={styles.page}>
-          <h1 className={styles.title}>Create Account</h1>
+  async function handleGoogleSignup() {
+    setMessage("");
 
-          {errorMessage && ( <p className={styles.error} role="alert">{errorMessage}</p> ) }
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+      options: {
+        redirectTo: `${window.location.origin}/`,
+      },
+    });
 
-          <form action={signup} className={styles.form}>
-            <label htmlFor="fullName" className={styles.label}>Full Name</label>
-            <input id="fullName" type="text" name="fullName" placeholder="full name" required
-            className={styles.input} />
+    if (error) {
+      setMessage(error.message);
+    }
+  }
 
-             <label htmlFor="email" className={styles.label}>Email</label>
-            <input id="email" type="email" name="email" placeholder="roamready@abc.com" required
-            className={styles.input} />
+  return (
+    <main className="signup-page">
+      <section className="signup-card">
+        <h1>Create Account</h1>
 
-             <label htmlFor="password" className={styles.label}>Password</label>
-            <input id="password" type="password" name="password" placeholder=" enter password" required
-            className={styles.input} />
+        <form onSubmit={handleSignup}>
+          <label htmlFor="fullName">Full Name</label>
+          <input
+            id="fullName"
+            type="text"
+            placeholder="full name"
+            value={fullName}
+            onChange={(event) => setFullName(event.target.value)}
+            required
+          />
 
-            <SubmitButton className={styles.button} pendingText="Create Account..">Create</SubmitButton>
+          <label htmlFor="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            placeholder="roamready@abc.com"
+            value={email}
+            onChange={(event) => setEmail(event.target.value)}
+            required
+          />
 
-          </form>
+          <label htmlFor="password">Password</label>
+          <input
+            id="password"
+            type="password"
+            placeholder="enter password"
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+            required
+          />
 
-          <p className={styles.divider}>or</p>
-          <GoogleSignInButton className={styles.googleButton} />
-     </main>
-    )
+          <button type="submit">Create</button>
+        </form>
+
+        <div className="signup-divider">or</div>
+
+        <button
+          type="button"
+          className="google-button"
+          onClick={handleGoogleSignup}
+        >
+          <span className="google-icon">G</span>
+          Continue with Google
+        </button>
+
+        {message && <p className="signup-message">{message}</p>}
+      </section>
+    </main>
+  );
 }

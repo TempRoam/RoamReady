@@ -1,35 +1,73 @@
-import Link from "next/link";
-import { createClient } from "@/utils/supabase/server";
-import { cookies } from "next/headers";
-import { signout } from "@/app/login/actions";
+"use client";
 
-export default async function Navbar() {
-  const cookieStore = await cookies();
-  const supabase = createClient(cookieStore);
-  const { data: { user } } = await supabase.auth.getUser();
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { supabase } from "@/lib/supabase";
+
+export default function Navbar() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  useEffect(() => {
+    checkUser();
+
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange((_event, session) => {
+      setIsLoggedIn(Boolean(session));
+    });
+
+    return () => {
+      subscription.unsubscribe();
+    };
+  }, []);
+
+  async function checkUser() {
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+
+    setIsLoggedIn(Boolean(user));
+  }
+
+  async function handleLogout() {
+    const { error } = await supabase.auth.signOut();
+
+    if (error) {
+      alert(error.message);
+      return;
+    }
+
+    window.location.href = "/login";
+  }
 
   return (
-    <main>
-      <nav className="navbar">
-        <Link href="/" className="nav-logo"><span>Roam</span>Ready</Link>
-        <div className="nav-links">
-          <Link href="/features">Dashboard</Link>
-          <Link href="/about">About</Link>
-          {user ? (
-            <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-              <span style={{ fontSize: "14px", color: "#2F4538", fontWeight: 600 }}>{user.email}</span>
-              <form action={signout}>
-                <button type="submit" className="signup-button" style={{ border: "none", cursor: "pointer" }}>Log Out</button>
-              </form>
-            </div>
-          ) : (
-            <>
-              <Link href="/login">Log In</Link>
-              <Link href="/signup" className="signup-button">Sign Up</Link>
-            </>
-          )}
-        </div>
-      </nav>
-    </main>
+    <nav className="navbar">
+      <Link href="/" className="nav-logo">
+        <span>Roam</span>Ready
+      </Link>
+
+      <div className="nav-links">
+        <Link href="/features">Features</Link>
+        <Link href="/about">About</Link>
+        <Link href="/notifications">Notifications</Link>
+
+        {isLoggedIn ? (
+          <button 
+            type="button"
+            onClick={handleLogout}
+            className="signup-button"
+          >
+            Log Out
+          </button>  
+        ) : (
+          <>
+            <Link href="/login">Log In</Link>
+            <Link href="/signup" className="signup-button">
+              Sign Up
+            </Link>
+          </>
+        )}
+      </div>
+    </nav>
   );
 }

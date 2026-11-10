@@ -1,20 +1,6 @@
 import Link from "next/link";
-import { redirect } from "next/navigation";
-import { createClient } from "@/utils/supabase/server";
-import { cookies } from "next/headers";
 
-export default async function Home(props: { searchParams?: Promise<{ code?: string }> }) {
-  const searchParams = props.searchParams ? await props.searchParams : undefined;
-  if (searchParams?.code) {
-    redirect(`/auth/callback?code=${searchParams.code}`);
-  }
-
-  const cookieStore = await cookies();
-  const supabase = createClient(cookieStore);
-  const { data: { user } } = await supabase.auth.getUser();
-
-  const startPlanningHref = user ? "/features" : "/signup";
-
+export default function Home() {
   return (
     <main>
       <section className="hero">
@@ -30,19 +16,14 @@ export default async function Home(props: { searchParams?: Promise<{ code?: stri
           <p>From your first idea to your final itinerary, RoamReady keeps your trip organized in one place. </p>
           
           <div className="hero-actions" >
-            <Link href={startPlanningHref} className="start-button">Start Planning</Link>
+            <Link href="/signup" className="start-button">Start Planning</Link>
             <Link href="/features" className="explore-button">Explore Features</Link>
           </div>
         </div>          {/* End of Hero content */}
 
-        <div className="hero-image" role="img" aria-label="Travel destinations featuring hiking, national parks, resorts, and hotels">
-        
+        <div className="hero-image"> 
           {/* Add image for hero content*/}
-          <img className="hero-slide"  src="/images/hiking.jpg" alt="hiking image"/>
-          <img className="hero-slide"  src="/images/outdoor.jpg" alt="outdoor image"/>
-          <img className="hero-slide" src="/images/France.jpg" alt="France image" />
-          <img className="hero-slide" src="/images/Mexico.jpg" alt="Mexico image"/>
-
+          <img src="/images/hero.jpg" alt="hero image"></img>
         </div>
       </section>
 
@@ -164,9 +145,7 @@ export default async function Home(props: { searchParams?: Promise<{ code?: stri
         <h2>Ready to start your adventure?</h2>
         <p>Join RoamReady and turn your travel plans into real memories.</p>
         <div className="create-account">
-          <Link href={user ? "/features" : "/signup"} className="signup-button">
-            {user ? "Go to Dashboard" : "Create Your Free Account"}
-          </Link>
+          <Link href="/signup" className="signup-button">Create Your Free Account</Link>
         </div>
       </section>
 
