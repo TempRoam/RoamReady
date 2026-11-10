@@ -7,21 +7,26 @@ export default function hotelpage() {
             {/* Title */ }
             <section className = "hotel">
                 <div className = "hotel-title">
-                <form className = "form">
-                    <div className = "search">
-                        <span className= "search-icon material-symbols-outlined"> search </span>
-                        <input className = "search-input" type = "search" placeholder = "Search"/>
-                    </div>
-                </form>
                     { /* <h1 className = "roam"> RoamReady </h1> */}
                     <Link href="/flights" className="flights-button">Flights</Link>
                     <Link href="/hotel" className="hotel-button">Hotel</Link>
                     { /* <button type = "button"> Flights </button> 
                       <button type = "button"> Hotel </button> */}
-                </div>           
-
-                <div className = "discover">
+                </div>
+                <form className = "form">
+                    <div className = "search">
+                        <span className= "search-icon material-symbols-outlined"> search </span>
+                        <input className = "search-input" type = "search" placeholder = "Search"/>
+                    </div>
                     <p>Not sure where to start? Here are popular Hotels...</p>
+                </form>
+
+                 {/* Hotels */}
+                <div className = "hotel-japan">
+                    {/* add image here */}
+                    <h1>Hotels in Japan </h1>
+                    <p>Features tatami mats, sliding doors, low tables and includes onsen (hot spring) and multi-course kaiseki dining.</p>
+                    <button type = "button"> More Details </button>
                 </div>
             </section>
 
@@ -92,6 +97,23 @@ export default function hotelpage() {
                             <button type = "button"> More Details </button>
                         </div>
                     </article>
+                <div className = "hotel-france">
+                    {/* add image here */}
+                    <h1>Hotels in France </h1>
+                    <p>Features 2 bedrooms, great dining, and exceptional service.</p>
+                    <button type = "button"> More Details </button>
+                </div>
+                <div className = "hotel-italy">
+                    {/* add image here */}
+                    <h1>Hotels in Italy </h1>
+                    <p>Features 3 bedrooms, has great views, and best food service.</p>
+                    <button type = "button"> More Details </button>
+                </div>
+                <div className = "hotel-mexico">
+                    {/* add image here */}
+                    <h1>Hotels in Mexico </h1>
+                    <p>Features 4 bedrooms, has a private pool, and is located near the beach.</p>
+                    <button type = "button"> More Details </button>
                 </div>
             </section>
 

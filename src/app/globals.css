@@ -64,7 +64,7 @@ body {
 }
 
 .hero-content h1{
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 600;
   line-height: 1.1;
   margin-bottom: 16px;
@@ -100,63 +100,6 @@ body {
   padding: 8px 20px;
   border-radius: 12px;
 }
-
-.hero-image {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  height: 400px;
-  overflow: hidden;
-  border-radius: 20px;
-}
-
-.hero-image .hero-slide {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  animation: rotate-images 20s linear infinite;
-}
-
-.hero-image .hero-slide:nth-child(1){
-  animation-delay:0s;
-}
-
-.hero-image .hero-slide:nth-child(2){
-  animation-delay: -15s;
-}
-
-.hero-image .hero-slide:nth-child(3){
-  animation-delay: -10s;
-}
-
-.hero-image .hero-slide:nth-child(4){
-  animation-delay: -5s;
-}
-
-/* Fade between images*/
-@keyframes rotate-images {
-  0%, 20% {
-    opacity: 1;
-  }
-  25%, 95% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-/*Smaller frame for mobile screens*/
-@media (max-width: 768px) {
-  .hero-image {
-    height: 300px;
-  }
-}
-
-
 
 /* Sign Up page */
 .sign-up { 
@@ -307,11 +250,10 @@ body {
 
 .ready-start {
   background-color: #04566E;
-  background-image: linear-gradient(
-    rgba(0,0,0,0.35), rgba(179, 218, 245, 0.35)), url("/images/roam.jpg");
+  background-image: url("/images/mountain.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 120px 40px;
+  padding: 80px 20px;
   background-position: center;
   color: white;
   text-align: center;
@@ -377,7 +319,7 @@ body {
   background-color: #04566E;
   border-radius: 12px;
   border: 1px solid black;
-  padding: 6px 100px;
+  padding: 10px 100px;
 
 }
 
@@ -386,7 +328,7 @@ body {
   background-color: #ffffff;
   border-radius: 12px;
   border: 1px solid black;
-  padding: 6px 100px;
+  padding: 10px 100px;
 }
 
 /* Center Search bar  */ 
@@ -401,33 +343,48 @@ body {
 .search {
   display: flex;
   align-items: center;
+  gap: 8px;
   border: 1px solid gray;
   border-radius: 12px;
-  padding: 6px 12px;
+  padding: 5px 12px;
   background-color: white;
 }
 
-.discover {
+/* Hotel in Japan */
+.hotel-japan {
   text-align: center;
+  padding: 20px;
 }
 
 /* Hotels */
+@media (max-width: 768px) {
+  .steps{flex-direction: column;
+    gap: 36px;
+  }
+  
+  .steps::before {
+    display: none;
+  }
 
-.hotel-grid{
-  display: grid;
-  grid-template-rows: repeat(1, 1fr);
-  gap: 20px;
+  .step span{
+    margin-bottom: 16px;
+  }
+  
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.signup-page {
+  min-height: 100vh;
+  background: #eef5ea;
+  padding-top: 110px;
+  color: #111;
 }
 
-.hotel-card {
-  background-color: white;
-  display: flex;
-}
-
-.hotel-card img {
-  width: 600px;
-  height: 500px;
-  object-fit: cover;
+.signup-card {
+  width: 418px;
+  margin: 0 auto;
 }
 
 .hotel-content {
@@ -442,10 +399,17 @@ body {
   padding-left: 5px;
   margin-bottom: 8px;
   
+.signup-card h1 {
+  margin-bottom: 48px;
+  text-align: center;
+  color: #505650;
+  font-size: 18px;
+  font-weight: 700;
 }
 
-.hotel-content p {
-  padding-left: 5px;
+.signup-card form {
+  display: flex;
+  flex-direction: column;
 }
 
 .hotel-content button {
@@ -455,124 +419,240 @@ body {
   border: 5px solid #689368;
   color: #689368;
   padding: 5px;
-}
-
-/* Flights */
-
-.flight {
-  padding: 24px;
-}
-
-.flight-title {
-  margin-bottom: 20px;
-  display: flex;
-  gap: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.hotelTwo-button {
-  color: black;
-  background-color: #ffffff;
-  border-radius: 12px;
-  border: 1px solid black;
-  padding: 6px 100px;
-
-}
-
-.flightTwo-button {
-  color: white;
-  background-color: #04566E;
-  border-radius: 12px;
-  border: 1px solid black;
-  padding: 6px 100px;
-}
-
-/* Center Search bar  */ 
-.flight-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
-/* Search bar styles */
-.flight-search {
-  display: flex;
-  align-items: center;
-  border: 1px solid gray;
-  border-radius: 12px;
-  padding: 6px 12px;
-  background-color: white;
-}
-
-.Area {
-  text-align: center;
-}
-
-.flight-grid{
-  display: grid;
-  grid-template-rows: repeat(1, 1fr);
-  gap: 20px;
-}
-
-.flight-card {
-  background-color: white;
-  display: flex;
-}
-
-.flight-card img {
-  width: 600px;
-  height: 500px;
-  object-fit: cover;
-}
-
-.flight-content {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
-.flight-content h1 {
-  font-size: 24px;
-  font-weight: bold;
-  padding-left: 5px;
+.signup-card label {
   margin-bottom: 8px;
-  
+  font-size: 14px;
 }
 
-.flight-content p {
-  padding-left: 5px;
+.signup-card input {
+  height: 42px;
+  margin-bottom: 21px;
+  padding: 0 11px;
+  border: 1px solid #aebcae;
+  border-radius: 4px;
+  background: transparent;
+  font-size: 14px;
+  outline: none;
 }
 
-.flight-content button {
-  margin-top: auto;
-  align-self: flex-end;
-  background-color: #2F4538;
-  border: 5px solid #689368;
-  color: #689368;
-  padding: 5px;
+.signup-card input::placeholder {
+  color: #c3cbc3;
 }
 
-/* cummunities page */
-.communities {
-  padding: 24px;
+.signup-card input:focus {
+  border-color: #304c3d;
 }
 
-/* Makes Button go to center and has a gap*/
-.communities-title {
-  margin-bottom: 20px;
+.signup-card button {
+  height: 46px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  background: #304c3d;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.signup-card button:hover {
+  background: #253d31;
+}
+
+.signup-message {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 14px;
+}
+.signup-divider {
   display: flex;
-  gap: 12px;
-  justify-content: center;
   align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+  color: #777;
+  font-size: 14px;
 }
 
-.communities-form {
+.signup-divider::before,
+.signup-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #c7d1c7;
+}
+
+.google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 46px;
+  border: 1px solid #d5dcd5;
+  border-radius: 4px;
+  background: white;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.google-button:hover {
+  background: #f6f6f6;
+}
+
+.google-icon {
+  color: #4285f4;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.login-page {
+  min-height: 100vh;
+  background: #eef5ea;
+  padding-top: 110px;
+  color: #111;
+}
+
+.login-card {
+  width: 418px;
+  margin: 0 auto;
+}
+
+.login-card h1 {
+  margin-bottom: 48px;
+  text-align: center;
+  color: #505650;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.login-card form {
   display: flex;
   flex-direction: column;
+}
+
+.login-card label {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.login-card input {
+  height: 42px;
+  margin-bottom: 21px;
+  padding: 0 11px;
+  border: 1px solid #aebcae;
+  border-radius: 4px;
+  background: transparent;
+  font-size: 14px;
+  outline: none;
+}
+
+.login-card input::placeholder {
+  color: #c3cbc3;
+}
+
+.login-card input:focus {
+  border-color: #304c3d;
+}
+
+.login-card form button {
+  height: 46px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  background: #304c3d;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.login-card form button:hover {
+  background: #253d31;
+}
+
+.forgot-link {
+  display: block;
+  margin-top: 16px;
+  text-align: center;
+  color: #304c3d;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
   gap: 12px;
+  justify-content: center;
+  margin: 20px 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #c7d1c7;
+}
+
+.google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: 46px;
+  border: 1px solid #d5dcd5;
+  border-radius: 4px;
+  background: white;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.google-button:hover {
+  background: #f6f6f6;
+}
+
+.google-icon {
+  color: #4285f4;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.login-message {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 14px;
+}
+.reset-page {
+  min-height: 100vh;
+  background: #eef5ea;
+  padding-top: 110px;
+  color: #111;
+}
+
+.reset-card {
+  width: 418px;
+  margin: 0 auto;
+}
+
+.reset-card h1 {
+  margin-bottom: 48px;
+  text-align: center;
+  color: #505650;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.reset-card form {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Search bar styles */
@@ -595,16 +675,44 @@ body {
 .communities-card {
   background-color: rgb(194, 194, 194);
   display: flex;
+.reset-card label {
+  margin-bottom: 8px;
+  font-size: 14px;
 }
 
-.communities-content h1 {
-  font-size: 24px;
-  font-weight: bold;
-  padding-left: 5px;
+.reset-card input {
+  height: 42px;
+  margin-bottom: 21px;
+  padding: 0 11px;
+  border: 1px solid #aebcae;
+  border-radius: 4px;
+  background: transparent;
+  font-size: 14px;
+  outline: none;
 }
 
-.communities-content p {
-  padding-left: 5px;
+.reset-card input::placeholder {
+  color: #9ba69b;
+}
+
+.reset-card input:focus {
+  border-color: #304c3d;
+}
+
+.reset-card button {
+  height: 46px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  background: #304c3d;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.reset-card button:hover {
+  background: #253d31;
 }
 
 /* CheckEmailPage */
@@ -659,13 +767,22 @@ body {
   .steps::before {
     display: none;
   }
+.reset-message {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 14px;
+}
 
-  .step span{
-    margin-bottom: 16px;
-  }
-  
-  .footer {
-    flex-direction: column;
-    text-align: center;
-  }
+.notification-auth-link {
+  color: #304c3d;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.notification-auth-link:hover {
+  color: #253d31;
+}
+
+.notification-login-message {
+  font-size: 18px;
 }

@@ -21,14 +21,9 @@ export default function Home() {
           </div>
         </div>          {/* End of Hero content */}
 
-        <div className="hero-image" role="img" aria-label="Travel destinations featuring hiking, national parks, resorts, and hotels">
-        
+        <div className="hero-image"> 
           {/* Add image for hero content*/}
-          <img className="hero-slide"  src="/images/hiking.jpg" alt="hiking image"/>
-          <img className="hero-slide"  src="/images/outdoor.jpg" alt="outdoor image"/>
-          <img className="hero-slide" src="/images/France.jpg" alt="France image" />
-          <img className="hero-slide" src="/images/Mexico.jpg" alt="Mexico image"/>
-
+          <img src="/images/hero.jpg" alt="hero image"></img>
         </div>
       </section>
 
