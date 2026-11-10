@@ -356,6 +356,7 @@ body {
   padding: 20px;
 }
 
+/* Hotels */
 @media (max-width: 768px) {
   .steps{flex-direction: column;
     gap: 36px;
@@ -386,6 +387,18 @@ body {
   margin: 0 auto;
 }
 
+.hotel-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.hotel-content h1 {
+  font-size: 24px;
+  font-weight: bold;
+  padding-left: 5px;
+  margin-bottom: 8px;
+  
 .signup-card h1 {
   margin-bottom: 48px;
   text-align: center;
@@ -399,6 +412,13 @@ body {
   flex-direction: column;
 }
 
+.hotel-content button {
+  margin-top: auto;
+  align-self: flex-end;
+  background-color: #2F4538;
+  border: 5px solid #689368;
+  color: #689368;
+  padding: 5px;
 .signup-card label {
   margin-bottom: 8px;
   font-size: 14px;
@@ -565,6 +585,7 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
+  justify-content: center;
   margin: 20px 0;
   color: #777;
   font-size: 14px;
@@ -634,6 +655,26 @@ body {
   flex-direction: column;
 }
 
+/* Search bar styles */
+.communities-search {
+  display: flex;
+  border: 1px solid gray;
+  border-radius: 12px;
+  padding: 6px 12px;
+  background-color: white;
+}
+
+.communities-grid{
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
+  width: 50%;
+  margin: auto;
+  gap: 20px;
+}
+
+.communities-card {
+  background-color: rgb(194, 194, 194);
+  display: flex;
 .reset-card label {
   margin-bottom: 8px;
   font-size: 14px;
@@ -674,6 +715,58 @@ body {
   background: #253d31;
 }
 
+/* CheckEmailPage */
+
+.check-email {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.check-email-content {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.email{
+  margin-top: -30px;
+}
+
+.email h1 {
+  font-size: large;
+  font-weight: 800;
+  color: #555555;
+  margin-bottom: 30px;
+}
+
+.email p{
+
+  margin-bottom: 80px;
+}
+
+
+.back-to-login-button {
+  background-color: #2f4538;
+  color: white;
+  padding: 10px 110px;  
+}
+
+
+.email-divider {
+  border:0;
+  border-top: 1px solid #04566E;
+  margin: 32px 0 ;
+}
+
+@media (max-width: 768px) {
+  .steps{flex-direction: column;
+    gap: 36px;
+  }
+  
+  .steps::before {
+    display: none;
+  }
 .reset-message {
   margin-top: 18px;
   text-align: center;

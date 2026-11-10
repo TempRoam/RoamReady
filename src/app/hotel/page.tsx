@@ -28,6 +28,75 @@ export default function hotelpage() {
                     <p>Features tatami mats, sliding doors, low tables and includes onsen (hot spring) and multi-course kaiseki dining.</p>
                     <button type = "button"> More Details </button>
                 </div>
+            </section>
+
+            <section className = "hotel-list">
+                <div className = "hotel-grid">
+
+                    {/* Japan Hotel */}
+                    <article className = "hotel-card">
+                        <img src="/images/JapanHotel.jpg" alt = "Japan Hotel" />
+                        <div className="hotel-content">
+                            <h1>Hotels in Japan </h1>
+                            <p>Features tatami mats, sliding doors, low tables and 
+                            includes onsen (hot spring) and multi-course kaiseki dining.
+                            Features 2 bedrooms, great dining, and exceptional service.</p>
+                            
+                            {/*GRID FOR HOTEL RECOMMENDATIONS*/}
+                            <section className="hotelrecommendation">
+                            <h2>Hotel Recommendations:</h2>
+                            
+                            <article className="recommendation-grid">
+                                {/* <img>INSERT HOTEL IMAGE</img> */}
+                                <div className="recommendation-content">
+                                    <h3>Hotel 1</h3>
+                                </div>
+
+                                <div className="recommendation-content">
+                                    <h3>Hotel 2</h3>
+                                </div>
+
+                                <div className="recommendation-content">
+                                    <h3>Hotel 3</h3>
+                                </div>
+                            </article>
+
+                        </section>
+                        <button type = "button"> More Details </button>
+                        </div>
+                        
+                        
+                    </article>
+
+                    {/* France Hotel */}
+                    <article className = "hotel-card">
+                        <img src="/images/FranceHotel.jpg" alt = "France Hotel" />
+                        <div className="hotel-content">
+                            <h1>Hotels in France </h1>
+                            <p>Features 2 bedrooms, great dining, and exceptional service.</p>
+                            <button type = "button"> More Details </button>
+                        </div>
+                    </article>
+
+                    {/* Italy Hotel */}
+                    <article className = "hotel-card">
+                        <img src="/images/ItalyHotel.jpg" alt = "Italy Hotel" />
+                        <div className="hotel-content">
+                            <h1>Hotels in Italy </h1>
+                            <p>Features 3 bedrooms, has great views, and best food service.</p>
+                            <button type = "button"> More Details </button>
+                        </div>
+                    </article>
+
+                    {/* Mexico Hotel */}
+                    <article className = "hotel-card">
+                        <img src="/images/MexicoHotel.jpg" alt = "Mexico Hotel" />
+                        <div className="hotel-content">
+                            <h1>Hotels in Mexico </h1>
+                            <p>Features 4 bedrooms, has a private pool, and is located near the beach.</p>
+                            <button type = "button"> More Details </button>
+                        </div>
+                    </article>
                 <div className = "hotel-france">
                     {/* add image here */}
                     <h1>Hotels in France </h1>

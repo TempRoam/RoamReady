@@ -17,7 +17,7 @@ export default function Home() {
           
           <div className="hero-actions" >
             <Link href="/signup" className="start-button">Start Planning</Link>
-            <Link href="/features" className="explore-button">Explore Features</Link>
+            <Link href="#why-roamready" className="explore-button">Explore Features</Link>
           </div>
         </div>          {/* End of Hero content */}
 
@@ -52,7 +52,7 @@ export default function Home() {
       </section>
 
       {/* Why RoamReady */}
-      <section className="why-roamready">
+      <section className="why-roamready" id="why-roamready">
         <h2>Why RoamReady?</h2>
         <p> Everything you need for a smoother, safer trip.</p>
         
