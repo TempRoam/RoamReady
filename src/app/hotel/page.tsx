@@ -1,130 +1,194 @@
 import Link from "next/link";
-export default function hotelpage() {
-    return (
-       <main>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
-            
-            {/* Title */ }
-            <section className = "hotel">
-                <div className = "hotel-title">
-                    { /* <h1 className = "roam"> RoamReady </h1> */}
-                    <Link href="/flights" className="flights-button">Flights</Link>
-                    <Link href="/hotel" className="hotel-button">Hotel</Link>
-                    { /* <button type = "button"> Flights </button> 
-                      <button type = "button"> Hotel </button> */}
-                </div>
-                <form className = "form">
-                    <div className = "search">
-                        <span className= "search-icon material-symbols-outlined"> search </span>
-                        <input className = "search-input" type = "search" placeholder = "Search"/>
-                    </div>
-                    <p>Not sure where to start? Here are popular Hotels...</p>
-                </form>
 
-                 {/* Hotels */}
-                <div className = "hotel-japan">
-                    {/* add image here */}
-                    <h1>Hotels in Japan </h1>
-                    <p>Features tatami mats, sliding doors, low tables and includes onsen (hot spring) and multi-course kaiseki dining.</p>
-                    <button type = "button"> More Details </button>
-                </div>
-            </section>
+export default function HotelPage() {
+  return (
+    <main>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search"
+      />
 
-            <section className = "hotel-list">
-                <div className = "hotel-grid">
+      {/* Title */}
+      <section className="hotel">
+        <div className="hotel-title">
+          <Link href="/flights" className="flights-button">
+            Flights
+          </Link>
 
-                    {/* Japan Hotel */}
-                    <article className = "hotel-card">
-                        <img src="/images/JapanHotel.jpg" alt = "Japan Hotel" />
-                        <div className="hotel-content">
-                            <h1>Hotels in Japan </h1>
-                            <p>Features tatami mats, sliding doors, low tables and 
-                            includes onsen (hot spring) and multi-course kaiseki dining.
-                            Features 2 bedrooms, great dining, and exceptional service.</p>
-                            
-                            {/*GRID FOR HOTEL RECOMMENDATIONS*/}
-                            <section className="hotelrecommendation">
-                            <h2>Hotel Recommendations:</h2>
-                            
-                            <article className="recommendation-grid">
-                                {/* <img>INSERT HOTEL IMAGE</img> */}
-                                <div className="recommendation-content">
-                                    <h3>Hotel 1</h3>
-                                </div>
+          <Link href="/hotel" className="hotel-button">
+            Hotel
+          </Link>
+        </div>
 
-                                <div className="recommendation-content">
-                                    <h3>Hotel 2</h3>
-                                </div>
+        <form className="form">
+          <div className="search">
+            <span className="search-icon material-symbols-outlined">
+              search
+            </span>
 
-                                <div className="recommendation-content">
-                                    <h3>Hotel 3</h3>
-                                </div>
-                            </article>
+            <input
+              className="search-input"
+              type="search"
+              placeholder="Search"
+            />
+          </div>
 
-                        </section>
-                        <button type = "button"> More Details </button>
-                        </div>
-                        
-                        
-                    </article>
+          <p>Not sure where to start? Here are popular Hotels...</p>
+        </form>
 
-                    {/* France Hotel */}
-                    <article className = "hotel-card">
-                        <img src="/images/FranceHotel.jpg" alt = "France Hotel" />
-                        <div className="hotel-content">
-                            <h1>Hotels in France </h1>
-                            <p>Features 2 bedrooms, great dining, and exceptional service.</p>
-                            <button type = "button"> More Details </button>
-                        </div>
-                    </article>
+        {/* Featured hotel */}
+        <div className="hotel-japan">
+          <h1>Hotels in Japan</h1>
 
-                    {/* Italy Hotel */}
-                    <article className = "hotel-card">
-                        <img src="/images/ItalyHotel.jpg" alt = "Italy Hotel" />
-                        <div className="hotel-content">
-                            <h1>Hotels in Italy </h1>
-                            <p>Features 3 bedrooms, has great views, and best food service.</p>
-                            <button type = "button"> More Details </button>
-                        </div>
-                    </article>
+          <p>
+            Features tatami mats, sliding doors, low tables and includes onsen
+            (hot spring) and multi-course kaiseki dining.
+          </p>
 
-                    {/* Mexico Hotel */}
-                    <article className = "hotel-card">
-                        <img src="/images/MexicoHotel.jpg" alt = "Mexico Hotel" />
-                        <div className="hotel-content">
-                            <h1>Hotels in Mexico </h1>
-                            <p>Features 4 bedrooms, has a private pool, and is located near the beach.</p>
-                            <button type = "button"> More Details </button>
-                        </div>
-                    </article>
-                <div className = "hotel-france">
-                    {/* add image here */}
-                    <h1>Hotels in France </h1>
-                    <p>Features 2 bedrooms, great dining, and exceptional service.</p>
-                    <button type = "button"> More Details </button>
-                </div>
-                <div className = "hotel-italy">
-                    {/* add image here */}
-                    <h1>Hotels in Italy </h1>
-                    <p>Features 3 bedrooms, has great views, and best food service.</p>
-                    <button type = "button"> More Details </button>
-                </div>
-                <div className = "hotel-mexico">
-                    {/* add image here */}
-                    <h1>Hotels in Mexico </h1>
-                    <p>Features 4 bedrooms, has a private pool, and is located near the beach.</p>
-                    <button type = "button"> More Details </button>
-                </div>
-            </section>
+          <button type="button">More Details</button>
+        </div>
+      </section>
 
-            {/* footer */ }
-            <footer className="footer">
-                <p>Copyright 2026 RoamReady. All rights reserved.</p>
-                <div className="footer-links">
-                    <Link href="/about">About</Link>
-                    <Link href="/features">Features</Link>
-                </div>
-            </footer>
-        </main>
-    )
+      {/* Hotel list */}
+      <section className="hotel-list">
+        <div className="hotel-grid">
+          {/* Japan Hotel */}
+          <article className="hotel-card">
+            <img
+              src="/images/JapanHotel.jpg"
+              alt="Japan Hotel"
+            />
+
+            <div className="hotel-content">
+              <h1>Hotels in Japan</h1>
+
+              <p>
+                Features tatami mats, sliding doors, low tables and includes
+                onsen (hot spring) and multi-course kaiseki dining. Features 2
+                bedrooms, great dining, and exceptional service.
+              </p>
+
+              {/* Hotel recommendations */}
+              <section className="hotelrecommendation">
+                <h2>Hotel Recommendations:</h2>
+
+                <article className="recommendation-grid">
+                  <div className="recommendation-content">
+                    <h3>Hotel 1</h3>
+                  </div>
+
+                  <div className="recommendation-content">
+                    <h3>Hotel 2</h3>
+                  </div>
+
+                  <div className="recommendation-content">
+                    <h3>Hotel 3</h3>
+                  </div>
+                </article>
+              </section>
+
+              <button type="button">More Details</button>
+            </div>
+          </article>
+
+          {/* France Hotel */}
+          <article className="hotel-card">
+            <img
+              src="/images/FranceHotel.jpg"
+              alt="France Hotel"
+            />
+
+            <div className="hotel-content">
+              <h1>Hotels in France</h1>
+
+              <p>
+                Features 2 bedrooms, great dining, and exceptional service.
+              </p>
+
+              <button type="button">More Details</button>
+            </div>
+          </article>
+
+          {/* Italy Hotel */}
+          <article className="hotel-card">
+            <img
+              src="/images/ItalyHotel.jpg"
+              alt="Italy Hotel"
+            />
+
+            <div className="hotel-content">
+              <h1>Hotels in Italy</h1>
+
+              <p>
+                Features 3 bedrooms, has great views, and best food service.
+              </p>
+
+              <button type="button">More Details</button>
+            </div>
+          </article>
+
+          {/* Mexico Hotel */}
+          <article className="hotel-card">
+            <img
+              src="/images/MexicoHotel.jpg"
+              alt="Mexico Hotel"
+            />
+
+            <div className="hotel-content">
+              <h1>Hotels in Mexico</h1>
+
+              <p>
+                Features 4 bedrooms, has a private pool, and is located near
+                the beach.
+              </p>
+
+              <button type="button">More Details</button>
+            </div>
+          </article>
+
+          {/* Additional hotel sections */}
+          <div className="hotel-france">
+            <h1>Hotels in France</h1>
+
+            <p>
+              Features 2 bedrooms, great dining, and exceptional service.
+            </p>
+
+            <button type="button">More Details</button>
+          </div>
+
+          <div className="hotel-italy">
+            <h1>Hotels in Italy</h1>
+
+            <p>
+              Features 3 bedrooms, has great views, and best food service.
+            </p>
+
+            <button type="button">More Details</button>
+          </div>
+
+          <div className="hotel-mexico">
+            <h1>Hotels in Mexico</h1>
+
+            <p>
+              Features 4 bedrooms, has a private pool, and is located near the
+              beach.
+            </p>
+
+            <button type="button">More Details</button>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="footer">
+        <p>Copyright 2026 RoamReady. All rights reserved.</p>
+
+        <div className="footer-links">
+          <Link href="/about">About</Link>
+          <Link href="/features">Features</Link>
+        </div>
+      </footer>
+    </main>
+  );
 }

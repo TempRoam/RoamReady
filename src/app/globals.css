@@ -398,7 +398,8 @@ body {
   font-weight: bold;
   padding-left: 5px;
   margin-bottom: 8px;
-  
+}
+
 .signup-card h1 {
   margin-bottom: 48px;
   text-align: center;
@@ -419,6 +420,8 @@ body {
   border: 5px solid #689368;
   color: #689368;
   padding: 5px;
+}
+
 .signup-card label {
   margin-bottom: 8px;
   font-size: 14px;
@@ -675,6 +678,8 @@ body {
 .communities-card {
   background-color: rgb(194, 194, 194);
   display: flex;
+}
+  
 .reset-card label {
   margin-bottom: 8px;
   font-size: 14px;
@@ -767,6 +772,7 @@ body {
   .steps::before {
     display: none;
   }
+} 
 .reset-message {
   margin-top: 18px;
   text-align: center;
