@@ -39,47 +39,49 @@ export default async function ResetPasswordPage(props: {
                     </main>
     )
     }
-"use client";
 
-import { FormEvent, useState } from "react";
-import { supabase } from "@/lib/supabase";
+    //commenting out because there is a conflict, needs to be fixed or deleted
+//"use client";
 
-export default function ResetPasswordPage() {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+//import { FormEvent, useState } from "react";
+//import { supabase } from "@/lib/supabase";
 
-  async function handleReset(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+//export default function ResetPasswordPage() {
+  //const [email, setEmail] = useState("");
+  //const [message, setMessage] = useState("");
 
-    const { error } = await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${window.location.origin}/reset-password/update`,
-    });
+  //async function handleReset(event: FormEvent<HTMLFormElement>) {
+    //event.preventDefault();
 
-    if (error) {
-      setMessage(error.message);
-      return;
-    }
+   // const { error } = await supabase.auth.resetPasswordForEmail(email, {
+     // redirectTo: `${window.location.origin}/reset-password/update`,
+    //});
 
-    setMessage("Check your email for a password reset link.");
-  }
+    //if (error) {
+    //  setMessage(error.message);
+    //  return;
+   // }
 
-  return (
-    <main>
-      <h1>Reset your password</h1>
+   // setMessage("Check your email for a password reset link.");
+  //}
 
-      <form onSubmit={handleReset}>
-        <input
-          type="email"
-          placeholder="Enter your email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-          required
-        />
+  //return (
+    //<main>
+      //<h1>Reset your password</h1>
 
-        <button type="submit">Send Reset Link</button>
-      </form>
+      //<form onSubmit={handleReset}>
+        //<input
+          //type="email"
+          //placeholder="Enter your email"
+          //value={email}
+          //onChange={(event) => setEmail(event.target.value)}
+          //required
+        ///>
 
-      {message && <p>{message}</p>}
-    </main>
-  );
-}
+        //<button type="submit">Send Reset Link</button>
+      //</form>
+
+      //{message && <p>{message}</p>}
+    //</main>
+  //);
+//}
