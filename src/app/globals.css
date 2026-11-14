@@ -393,7 +393,24 @@ body {
 
 }
 
-/* hotel page */
+
+/* 
+a) Module Hotel page CSS 
+b) Date of Code created: October 9th 2026 Last Updated: Today
+c) Luis Larios
+
+d) Makes the hotel page having colors, spacing, text size, button size, image size and rows and columns.
+
+e) The important functions from the hotel page CSS is display flex and grid becuase the display flex will help
+   align items next to the image and grid helps us to make rows and columns.
+
+f) In the Hotel-grid function has a code called grid-template-rows: repeat(1, 1fr) which makes it where each
+   hotel card will have one row. 
+
+g) The hotel page CSS has algorithm of display flex and grid
+*/
+
+/* Makes all 4 sides have 24px each in the hotel section */
 .hotel {
   padding: 24px;
 }
@@ -417,6 +434,7 @@ body {
 
 }
 
+/* Flights Button styles */
 .flights-button {
   color: black;
   background-color: #ffffff;
@@ -443,11 +461,12 @@ body {
   background-color: white;
 }
 
+/* Centers the text in the discover section */
 .discover {
   text-align: center;
 }
 
-/* Hotels */
+/* Adds one row for each Hotel */
 
 .hotel-grid{
   display: grid;
@@ -455,23 +474,27 @@ body {
   gap: 20px;
 }
 
+/* Makes the hotel card have color */
 .hotel-card {
   background-color: white;
   display: flex;
 }
 
+/* Makes the hotel image a certain size */
 .hotel-card img {
   width: 600px;
   height: 500px;
   object-fit: cover;
 }
 
+/* Makes the hotel content to be next to the image */
 .hotel-content {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
+/* Adds stying to the h1 in the hotel content */
 .hotel-content h1 {
   font-size: 24px;
   font-weight: bold;
@@ -480,10 +503,12 @@ body {
   
 }
 
+/* Adds 5px of spacing to the left */
 .hotel-content p {
   padding-left: 5px;
 }
 
+/* Adds styling to the button in the hotel content */
 .hotel-content button {
   margin-top: auto;
   align-self: flex-end;
@@ -497,6 +522,7 @@ body {
 
 } */
 
+/* Makes each hotel row have 3 hotel columns within that row*/
 .recommendation-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -505,6 +531,7 @@ body {
   max-width: 1100px;
 }
 
+/* Changes the image size */
 .recommendation-grid img {
   display: block;
   width: 100%;
@@ -518,7 +545,21 @@ body {
   flex-direction: column;
 }
 
-/* Flights */
+/* 
+a) Module flight page CSS
+b) Date of Code created: October 10th 2026 Last Updated: Today
+c) Luis Larios
+
+d) Makes the flight page having colors, spacing, text size, button size, image size and rows and columns.
+
+e) The important functions from the flight page CSS is display flex and grid becuase the display flex will help
+   align items next to the image and grid helps us to make rows and columns.
+
+f) In the Flight-grid function has a code called grid-template-rows: repeat(1, 1fr) which makes it where each
+   flight card will have one row. 
+
+g) The flight page CSS has algorithm of display flex and grid
+*/
 
 .flight {
   padding: 24px;
@@ -616,7 +657,24 @@ body {
   padding: 5px;
 }
 
-/* cummunities page */
+/* 
+a) Module communities page CSS
+b) Date of Code created: October 9th 2026 Last Updated: Today
+c) Luis Larios
+
+d) Makes the communities page having colors, spacing, text size, button size, image size and rows and columns.
+
+e) The important functions from the communities page CSS is display flex and grid becuase the display flex will help
+   align items next to the image and grid helps us to make rows and columns.
+
+f) In the Communities-grid function has a code called grid-template-rows: repeat(1, 1fr) which makes it where each
+   community card will have one row. 
+
+g) The communities page CSS has algorithm of display flex and grid
+*/
+
+
+/* communities page */
 .communities {
   padding: 24px;
 }
@@ -667,6 +725,21 @@ body {
 .communities-content p {
   padding-left: 5px;
 }
+
+/* 
+a) Module CheckEmailPage page CSS
+b) Date of Code created: October 26th 2026 Last Updated: Today
+c) Luis Larios
+
+d) Makes the CheckEmailPage page having colors, spacing, text size, button size, image size and rows and columns.
+
+e) The important functions from the CheckEmailPage page CSS is display flex becuase the display flex will help
+   align items in the center.
+
+f) In the CheckEmailpage CSS the display flex was used to make easly alignment for the items that go into the center
+
+g) The CheckEmailPage page CSS has algorithm of display flex
+*/
 
 /* CheckEmailPage */
 

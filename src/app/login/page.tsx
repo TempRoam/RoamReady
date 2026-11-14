@@ -1,7 +1,7 @@
 /**
  * Module LoginPage
  * File   src/app/login/page.tsx
- * Date   created on: last updated: 
+ * Date   created on: 09/23/2026
  * Programmer Daniela Chavez
  *
 *d) Description: The Server component that renders the "Log in" page.

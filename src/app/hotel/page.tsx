@@ -1,6 +1,6 @@
 /*
 a) Module Hotel page
-b) Date of Code created: Last Updated: Today
+b) Date of Code created: October 9th 2026 Last Updated: Today
 c) Luis Larios
 d) The Hotel page will allow the user to search the hotel they want to use and if the user doesn’t know where to start, 
     the website will tell them the 4 hotels that are trending. These 4 hotels will have 3 hotel cards each and when they 
