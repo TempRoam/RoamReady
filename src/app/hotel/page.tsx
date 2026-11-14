@@ -42,15 +42,17 @@ export default function hotelpage() {
                             <h2>Hotel Recommendations:</h2>
                             
                             <article className="recommendation-grid">
-                                {/* <img>INSERT HOTEL IMAGE</img> */}
+                                <img src="/images/JapanHotel1.jpg" alt="Hotel 1" />
                                 <div className="recommendation-content">
                                     <h3>Hotel 1</h3>
                                 </div>
-
+                                
+                                <img src="/images/JapanHotel2.jpg" alt="Hotel 2" />
                                 <div className="recommendation-content">
                                     <h3>Hotel 2</h3>
                                 </div>
 
+                                <img src="/images/JapanHotel3.jpg" alt="Hotel 3" />
                                 <div className="recommendation-content">
                                     <h3>Hotel 3</h3>
                                 </div>
