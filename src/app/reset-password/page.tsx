@@ -1,6 +1,5 @@
 /**
  * Module 
- * File   src/app/
  * Date   created on: last updated: 
  * Programmer Daniela Chavez
  *
@@ -22,7 +21,7 @@ callback and forwards the user to update password.
  * server action and that then communicates with Supabase to handle the recovery process. There is also a link back to the login page. The 
  * overall password recovery is handled by Supabase.
  
- * Relies on: Next.js Sever Components, Supabase signup server action, SubmitButton component, signup.module.css.
+ * Relies on: Next.js Sever Components, Next.js Link component, requestPasswordReset server action, shared signup.module.css, reset-password.module.css, SubmitButton component
  */
 
 //works by entering email andit sends a reset link
