@@ -3,7 +3,7 @@ export default function hotelpage() {
     return (
        <main>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
-            
+           
             {/* Title */ }
             <section className = "hotel">
                 <div className = "hotel-title">
@@ -16,41 +16,45 @@ export default function hotelpage() {
                     { /* <h1 className = "roam"> RoamReady </h1> */}
                     <Link href="/flights" className="flights-button">Flights</Link>
                     <Link href="/hotel" className="hotel-button">Hotel</Link>
-                    { /* <button type = "button"> Flights </button> 
+                    { /* <button type = "button"> Flights </button>
                       <button type = "button"> Hotel </button> */}
-                </div>           
+                </div>          
+
 
                 <div className = "discover">
                     <p>Not sure where to start? Here are popular Hotels...</p>
                 </div>
             </section>
 
+
             <section className = "hotel-list">
                 <div className = "hotel-grid">
+
 
                     {/* Japan Hotel */}
                     <article className = "hotel-card">
                         <img src="/images/JapanHotel.jpg" alt = "Japan Hotel" />
                         <div className="hotel-content">
                             <h1>Hotels in Japan </h1>
-                            <p>Features tatami mats, sliding doors, low tables and 
+                            <p>Features tatami mats, sliding doors, low tables and
                             includes onsen (hot spring) and multi-course kaiseki dining.
                             Features 2 bedrooms, great dining, and exceptional service.</p>
-                            
+                           
                             {/*GRID FOR HOTEL RECOMMENDATIONS*/}
                             <section className="hotelrecommendation">
                             <h2>Hotel Recommendations:</h2>
-                            
+                           
                             <article className="recommendation-grid">
                                 <img src="/images/JapanHotel1.jpg" alt="Hotel 1" />
                                 <div className="recommendation-content">
                                     <h3>Hotel 1</h3>
                                 </div>
-                                
+                               
                                 <img src="/images/JapanHotel2.jpg" alt="Hotel 2" />
                                 <div className="recommendation-content">
                                     <h3>Hotel 2</h3>
                                 </div>
+
 
                                 <img src="/images/JapanHotel3.jpg" alt="Hotel 3" />
                                 <div className="recommendation-content">
@@ -58,12 +62,14 @@ export default function hotelpage() {
                                 </div>
                             </article>
 
+
                         </section>
                         <button type = "button"> More Details </button>
                         </div>
-                        
-                        
+                       
+                       
                     </article>
+
 
                     {/* France Hotel */}
                     <article className = "hotel-card">
@@ -75,6 +81,7 @@ export default function hotelpage() {
                         </div>
                     </article>
 
+
                     {/* Italy Hotel */}
                     <article className = "hotel-card">
                         <img src="/images/ItalyHotel.jpg" alt = "Italy Hotel" />
@@ -84,6 +91,7 @@ export default function hotelpage() {
                             <button type = "button"> More Details </button>
                         </div>
                     </article>
+
 
                     {/* Mexico Hotel */}
                     <article className = "hotel-card">
@@ -96,6 +104,7 @@ export default function hotelpage() {
                     </article>
                 </div>
             </section>
+
 
             {/* footer */ }
             <footer className="footer">
