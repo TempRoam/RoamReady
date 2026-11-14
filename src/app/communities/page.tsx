@@ -1,3 +1,22 @@
+/*
+a) Module Communities page
+b) Date of Code created: October 9th 2026Last Updated: Today
+c) Luis Larios
+d) The Communites page will allow the user to communicate with each other about their thoughts on the trip or flights. 
+   The Communites page will also allow users to post and comment on other people's posts. The Communites page will also 
+   help people by if they have a question on the hotel or flights or having trouble finding the best hotel or flight to 
+   get for their travels. 
+
+e) The communities() function has article class name called communities-card and div class name called communities-content which are
+   place holders. These functions will be updated when the user puts their own title and text when they post on the communities page.
+
+f) The article Class displays the Communities cards with title and text
+
+g) This module doesn't have any algorithm.
+
+*/
+
+
 import Link from "next/link";
 export default function communities() {
     return (

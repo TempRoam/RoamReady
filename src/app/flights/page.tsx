@@ -1,6 +1,6 @@
 /*
 a) Module Flight page
-b) Date of Code created: Last Updated: Today
+b) Date of Code created: October 10th 2026 Last Updated: Today
 c) Luis Larios
 d) The Flights page will allow the user to search the flight they want to use and if the user doesn’t 
     know where to start, the website will tell them the 4 flights that are trending. These 4 flights will 
