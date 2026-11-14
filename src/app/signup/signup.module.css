@@ -1,4 +1,33 @@
-/* css for signup page only */
+/**
+ * a) b) c)
+ * Module: signup.module.css
+ * File:   src/app/signup/signup.module.css
+ * Date:  created on: last updated: 
+ * Programmer: Daniela Chavez
+ *
+ *d) Description: The CSS module is the styling for the signup page,
+ * the styles are also reused by login and reset-password, these styles
+ * are based on the designs created on figma by the frontend team and are reused to maintain consistency.
+ *
+ *e) Important functions in each class: 
+ .page - this controls the pages layout, it also defines the shared color variables.
+ .title - styles the page heading
+ .form - this arranges the elements vertically
+ .label - styles input labels
+ .input - styles form input fields
+ .button - styles the main submit button
+ .error - displays error messages
+ .divider - styles the seperator between authentication options
+ .googleButton - styles the google sign-in button
+ .forgotLink - styles the forgot password link
+ *
+ * f) Data structures: CSS custom properties used to store reuasable colors: --green-dark, --green-border, and --text.
+ * g) Algorithm: None because this is just the visuals.
+ * 
+ * Relies on: CSS Modules, imported by signup, login and reset-password pages.
+ */
+
+/* css for signup page */
 .button {
     margin-top: 15px;
     height: 50px;
