@@ -1,4 +1,21 @@
--- Initial relational database schema for User Profiles and Trips
+/**
+ * a) Module Name: Database Schema and Row-Level Security Policies
+ * b) Date of Code: October 8, 2026
+ * c) Programmer's Name: Peter Kimberley
+ * d) Brief Description: PostgreSQL SQL migration script establishing relational schema for
+ *    profiles and trips tables with Row-Level Security (RLS) enforcement.
+ * e) Important Tables & Policies:
+ *    - public.profiles: User metadata table linked 1:1 to auth.users with ON DELETE CASCADE.
+ *    - public.trips: Travel trip records linked to profiles via user_id foreign key.
+ *    - RLS Policies: Guarantees user isolation (auth.uid() = user_id) on SELECT, INSERT, UPDATE, DELETE.
+ * f) Important Data Structures:
+ *    - UUID: 128-bit random identifiers (gen_random_uuid()) preventing sequential ID enumeration.
+ *    - TIMESTAMPTZ: UTC-standardized timestamps for created_at and updated_at.
+ * g) Algorithm & Justification:
+ *    - Database Kernel Row-Level Security vs Application Logic: Enforcing security directly
+ *      in the PostgreSQL query planner physically prevents unauthorized data access regardless
+ *      of any application-level query bugs.
+ */
 
 -- 1. Profiles Table
 CREATE TABLE public.profiles (
@@ -31,7 +48,7 @@ CREATE TABLE public.trips (
 -- Set up Row Level Security (RLS)
 ALTER TABLE public.trips ENABLE ROW LEVEL SECURITY;
 
--- Optional: Basic policies (assuming users can only read/write their own data)
+-- Basic policies (users can only read/write their own data)
 CREATE POLICY "Users can view their own profile." ON public.profiles FOR SELECT USING (auth.uid() = id);
 CREATE POLICY "Users can update their own profile." ON public.profiles FOR UPDATE USING (auth.uid() = id);
 

@@ -1,5 +1,25 @@
 'use server'
 
+/**
+ * a) Module Name: Auth Actions
+ * b) Date of Code: October 9, 2026 - October 28, 2026
+ * c) Programmer's Name: Peter Kimberley
+ * d) Brief Description: Server-side remote procedure calls ('use server') executing in Node.js
+ *    to handle user authentication (login, signup, signout) with Supabase Auth and manage
+ *    encrypted HTTP-only session cookies.
+ * e) Important Functions:
+ *    - login(formData: FormData): Validates email/password credentials and establishes an active session.
+ *    - signup(formData: FormData): Registers a new user account in Supabase Auth and sets session cookies.
+ *    - signout(): Revokes the active session token and clears auth cookies.
+ * f) Important Data Structures:
+ *    - FormData: W3C standard key-value representation of HTML form submissions.
+ *    - ReadonlyRequestCookies: Next.js asynchronous cookie store representing HTTP request headers.
+ * g) Algorithm & Justification:
+ *    - Server Action RPC over REST Endpoints: Using Next.js Server Actions executes code directly on
+ *      the server behind form submissions. This keeps API keys, database credentials, and session
+ *      management completely off the client-side JavaScript bundle, mitigating XSS token theft.
+ */
+
 import { revalidatePath } from 'next/cache'
 import { redirect } from 'next/navigation'
 import { createClient } from '@/utils/supabase/server'
