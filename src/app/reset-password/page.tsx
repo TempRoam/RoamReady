@@ -1,3 +1,29 @@
+/**
+ * Module ResetPasswordPage
+ * Date   created on: 09/23/2026
+ * Programmer Daniela Chavez
+ *
+*d) Description: This works as the password recovery page. It uses the users 
+email to request a password-rest link through Supabase. The link redirects the user to /auth/callback and handles the authentication
+callback and forwards the user to update password.
+
+ *e) Important functions in each class:
+ @function ResetPasswordPage
+ @param props.searchParams, containing optional success or error messages
+ that are passed through the URL
+ @returns JSX containing the email input form
+ * f) Data structures: 
+ * - FormData, this contains the email field that is submitted by the user
+ * - searchParams, this contains the optional error and message strings that are used to show feedback 
+ * after the recovery request.
+ * g) Algorithm: The page checks the URL for any errors or success messages and shows them to the user.
+ * The user can then enter their email and submit the form to request a password-reset link. The request is sent to the requestPasswordReset
+ * server action and that then communicates with Supabase to handle the recovery process. There is also a link back to the login page. The 
+ * overall password recovery is handled by Supabase.
+ 
+ * Relies on: Next.js Sever Components, Next.js Link component, requestPasswordReset server action, shared signup.module.css, reset-password.module.css, SubmitButton component
+ */
+
 //works by entering email andit sends a reset link
 //link then goes to /auth/callback, that signs them in and sends them to a update password page
 //Jira task Nov 9: create update password page/ discuss with team on design

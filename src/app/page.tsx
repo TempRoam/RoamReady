@@ -3,6 +3,25 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
+/* Module 
+   A. Module Name: RoamReady HomePage 
+   B. Date Created:  September           Date Last Modified: November 13th
+   C. Programmer: Gisselle Francisco 
+   D. Brief Description of Module
+      Displays the RoamReady landing page with a rotating destination image, three trip-planning steps, eight feature cards, a signup call to action, and footer links. 
+        
+      This module consists of two files.
+      src/app/itinerary/page.tsx
+      src/app/itinerary/global.css
+
+   E. Important Functions and Components
+      Home() takes no props and returns the JSX for the landing page. A useEffect callback starts a timer that advances the image  every three seconds. The state updater takes the previous image index and returns the next index. The effect returns a cleanup function that clears the timer when the component unmounts.
+   F. Important Data Structures
+       heroImages is an array of four local image paths. currentImage is a zero-based index stored in React state and initialized to 0. The image element reads its source from heroImages[currentImage].
+   G. Briefly describe any algorithm that you may have used and why did you select it upon other algorithms where more than one option exists. 
+      The slideshow calculates the next index using (previousImage + 1) % heroImages.length. With four images, the index cycles through 0, 1, 2, and 3, then returns to 0. I chose modulo because it handles the wraparound in one expression and uses the array length to determine when to loop.
+    
+*/
 const heroImages = [
   "/images/tokyo-hero.jpg",
   "/images/mountain.jpg",

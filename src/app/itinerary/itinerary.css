@@ -1,4 +1,28 @@
 /*Hero Content*/
+/* Module 
+   A. Module Name: RoamReady Itinerary Page (css file)
+   B. Date Created:  October 28  Date Last Modified: November 13
+   C. Programmer: Gisselle Francisco 
+   D. Brief Description of Module:
+      Styles the static preview of a five-day trip to Tokyo, Japan, from May 12-16, 2027. It defines the appearance of the trip header, date tabs, May 12 activity timeline, and sidebar. Related component: src/app/itinerary/page.tsx
+
+      This module consists of two files.
+      src/app/itinerary/page.tsx
+      src/app/itinerary/itinerary.css
+
+   E. Important Functions and Components
+      The browser applies the stylesheet to matching elements, class names, and button staters from the itinerary page. 
+      .trip-hero places the trip text and image in two equal columns. 
+      .trip-days defines five equal columns for the date tabs.
+      .itinerary-layout positions the activity area besides the sidebar.
+      These rules produce the page's visual layout and styling.
+   F. Important data structure in class/methods
+      The stylesheet uses no custom data structures. The activity timeline is an ordered list in page.tsx. The .culture, .food, and .sightseeing classes define category badge colors.
+
+   G. Briefly describe any algorithm that you may have used and why did you select it upon other algorithms where more than one option exists. 
+      The stylesheet uses no custom algorithm. I chose CSS Grid to align the time, marker, and activity card across timeline rows. I used Flexbox for the trip dates and location so they can wrap when space is limited. A ::before pseudo-element draws the vertical connector on each timeline row except the last.
+
+*/
 .trip-hero {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);

@@ -1,25 +1,26 @@
 /**
  * a) b) c)
- * @module SignupPage
- * @file   src/app/signup/page.tsx
- * @date  created on: last updated: 
- * @programmer Daniela Chavez
+ * Module SignupPage
+ * File   src/app/signup/page.tsx
+ * Date  created on: 09/23/2026
+ * Programmer Daniela Chavez
  *
  *d) Description:
  * This is the Server part that renders the "Create Account" page. The form submits user     
  * info to the server action for signup in ../login/action.ts and handles created accounts       
 through Supabase.
- *e)
+ *e) Important functions in each class:
  * @function SignupPage
  * @param  props.searchParams Promise<{ error?: string }>. The URL query params. For *Next.js the promise needs to be awaited before getting its values.
  * @returns JSX for the signup form. If there is an error message in the URL query *params the error shows in the url and the page itself.
-  * f)
- * Data structures: FormData fields sent to the action to get the users info given that is *fullName, email, password. The field fullName is a string that represents the user’s email *address. The field email is the string that represents the user’s email address. The field *password is the string representing the user’s password.
- * g)
- * Algorithm: The page awaits searchParams Promise so that it can get any error *message that is passed through the URL. If an error message is there, it is shown above *the page. The page then renders the signup page with fields for full name, email address *and password. When the user submits the form, the data of that form is then passed *through to the signup server action, that communicates with Supabase to handle the *account creation.
+  * f) Data structures: 
+  * FormData fields sent to the action to get the users info given that is *fullName, email, password. The field fullName is a string that represents the user’s email *address. The field email is the string that represents the user’s email address. The field *password is the string representing the user’s password.
+ * g) Algorithm: 
+ * The page awaits searchParams Promise so that it can get any error *message that is passed through the URL. If an error message is there, it is shown above *the page. The page then renders the signup page with fields for full name, email address *and password. When the user submits the form, the data of that form is then passed *through to the signup server action, that communicates with Supabase to handle the *account creation.
  * 
-* Relies on: Next.js Sever Components, Supabase signup server action, SubmitButton component, signup.module.css.
+ * Relies on: Next.js Sever Components, Supabase signup server action, SubmitButton component, signup.module.css.
  */
+
 
 
 import { signup } from '../login/actions' //the account is created by the signup server action in, ../login/action.ts, whcih talks to supabase
