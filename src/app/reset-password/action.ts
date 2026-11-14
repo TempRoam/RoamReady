@@ -1,3 +1,17 @@
+/**
+ * Module 
+ * File   src/app/
+ * Date   created on: last updated: 
+ * Programmer Daniela Chavez
+ *
+*d) Description:
+
+ *e) Important functions in each class:
+ * f) Data structures: 
+ * g) Algorithm: 
+ 
+ * Relies on: Next.js Sever Components, Supabase signup server action, SubmitButton component, signup.module.css.
+ */
 'use server'
 //need these to ask supabase to email a password reset link
 //using form on the reset pass page

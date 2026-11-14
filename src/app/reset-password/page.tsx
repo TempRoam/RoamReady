@@ -1,3 +1,17 @@
+/**
+ * Module 
+ * File   src/app/
+ * Date   created on: last updated: 
+ * Programmer Daniela Chavez
+ *
+*d) Description:
+
+ *e) Important functions in each class:
+ * f) Data structures: 
+ * g) Algorithm: 
+ 
+ * Relies on: Next.js Sever Components, Supabase signup server action, SubmitButton component, signup.module.css.
+ */
 //works by entering email andit sends a reset link
 //link then goes to /auth/callback, that signs them in and sends them to a update password page
 //Jira task Nov 9: create update password page/ discuss with team on design
