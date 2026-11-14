@@ -1,3 +1,22 @@
+/* Module 
+   A. Module Name
+   B. Date Created:  October  28           Date Last Modified: November 13th
+   C. Programmer: Gisselle Francisco 
+   D. Brief Description of Module
+       Displays a static preview of a Tokyo trip from May12-16, 2027. The page shows five trip dates, a May 12 activity timeline, and a sidebar with trip details, a budget link, and a placeholder map. The List, Calendar, and Activity controls are disabled. 
+     
+      This module consists of two files.
+      src/app/itinerary/page.tsx
+      src/app/itinerary/itinerary.css
+
+   E. Important Functions and Components
+      ItineraryPage() takes no inputs and returns the JSX that renders the itinerary preview. The View Budget link opens the /budget page. It will not load the budget page since it has not been created yet. 
+   F. Important Data Structures
+      The activity timeline is an ordered HTML list (<ol>). Each entry contains a time, image, title, location, description, and category. The trip overview uses a description list (<dl>) to group the destination, dates, accommodation, and estimated budget.
+   G. Briefly describe any algorithm that you may have used and why did you select it upon other algorithms where more than one option exists. 
+    The preview uses a fixed schedule, so it requires no sorting  algorithm. The three activities are written directly in JSX in the order they appear on the page: 9:00 AM, noon, and 3:00 PM.
+*/
+
 import Link from "next/link";
 import "./itinerary.css";
 
