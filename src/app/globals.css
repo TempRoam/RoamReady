@@ -457,12 +457,19 @@ body {
   padding: 5px;
 }
 
+<<<<<<< Updated upstream
 .hotelrecommendation {
 
+=======
+/* Hotel Recommendations */
+.hotelrecommendation {
+  padding: 24px;
+>>>>>>> Stashed changes
 }
 
 .recommendation-grid {
   display: grid;
+<<<<<<< Updated upstream
   grid-template-columns: 1fr;
   gap: 20px;
   margin: 0 auto;
@@ -480,6 +487,15 @@ body {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
+=======
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.recommendation-content {
+  background-color: lightgray;
+  padding: 16px;
+>>>>>>> Stashed changes
 }
 
 /* Flights */
@@ -644,6 +660,10 @@ body {
 .check-email-content {
   text-align: center;
   margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  width: 80%;
+  box-sizing: border-box;
 }
 
 .email{
@@ -658,8 +678,7 @@ body {
 }
 
 .email p{
-
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 
