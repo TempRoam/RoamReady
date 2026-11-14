@@ -37,6 +37,7 @@ export default function flights() {
                                You can see cool scenery like Mount Fuji and 
                                pink cherry blossoms trees. Japan also has amazing food like sushi, ramen and other type of food.
                                This is a great destination for a memorable trip.</p>
+
                             <button type = "button"> More Details </button>
                         </div>
                     </article>
