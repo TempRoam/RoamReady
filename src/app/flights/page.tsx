@@ -1,3 +1,24 @@
+/*
+a) Module Flight page
+b) Date of Code created: Last Updated: Today
+c) Luis Larios
+d) The Flights page will allow the user to search the flight they want to use and if the user doesn’t 
+    know where to start, the website will tell them the 4 flights that are trending. These 4 flights will 
+    have 3 flight cards each and when they click on them, it will send them to the flight they were clicking 
+    on and they can book them. The flight page also has a hotel button so they can go back and forward on each page
+
+e) The flights() function takes no inputs and returns the markup that displays Flights page. 
+The four destination cards render in the order they appear in JSK because the preview displays a fixed set of examples. 
+The input valus are the search input and link buttons for flight and hotel. The output for the link button will make the 
+user go to the flight page or hotel page
+
+f) The article Class displays the flight cards with images, text, and more details button.
+
+g) This module doesn't have any algorithm.
+
+*/
+
+
 import Link from "next/link";
 export default function flights() {
     return (

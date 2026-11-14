@@ -1,3 +1,25 @@
+/*
+a) Module Hotel page
+b) Date of Code created: Last Updated: Today
+c) Luis Larios
+d) The Hotel page will allow the user to search the hotel they want to use and if the user doesn’t know where to start, 
+    the website will tell them the 4 hotels that are trending. These 4 hotels will have 3 hotel cards each and when they 
+    click on them, it will send them to the hotel where they can book them. The hotel page also has a flight button so 
+    they can go back and forward on each page
+
+e) The Hotelpage() function takes no inputs and returns the markup that displays Hotel page. 
+The four destination cards render in the order they appear in JSK because the preview displays a fixed set of examples.
+The input valus are the search input and link buttons for flight and hotel. The output for the link button will make the 
+user go to the flight page or hotel page
+
+f) The article Class displays the hotel cards with images, text, and more details button.
+
+g) This module doesn't have any algorithm.
+
+*/
+
+
+
 import Link from "next/link";
 export default function hotelpage() {
     return (
