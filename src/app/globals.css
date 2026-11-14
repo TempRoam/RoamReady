@@ -14,7 +14,22 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
-/* Navbar */
+
+/* Navbar Styles*/
+/* Module 
+   A. Module Name: NavBar Styles
+   B. Date Created:    September 23 By Daniela         Date Last Modified: November 13th
+   C. Programmer: Gisselle Francisco
+   D. Brief Description of Module
+      Styles the navbar layout, RoamReady logo, navigation links, and signup button.
+
+   E. Important Functions and Components
+    The browser applies these rules to matching elements in the navbar markup to produce the rendered layout and appearance. .navbar spaces its items apart and centers them vertically. .nav-links adds 24px between links. .nav-logo styles the brand text, and .nav-logo span applies the accent color to part of it. .signup-button adds white text, a dark green background, padding, and rounded corners.
+   F. Important data structure in class/methods
+    None. The navbar markup supplies the logo, links, and class names.
+   G. Briefly describe any algorithm that you may have used and why did you select it upon other algorithms where more than one option exists. 
+   These styles use no custom algorithm. I chose Flexbox because the navbar items are arranged in a single row. It distributes available space across the row and centers items vertically.
+*/
 
 .navbar {
   display: flex;
@@ -54,7 +69,20 @@ body {
 }
 
 /* hero section*/
+/* Module 
+   A. Module Name Hero Section Styles
+   B. Date Created:       September 23 by Daniela        Date Last Modified: November 13th
+   C. Programmer: Gisselle Francisco
+   D. Brief Description of Module
+      Styles the homepage hero, How It Works steps, Why RoamReady feature cards, and signup call to action.
+   E. Important Functions and Components
+    The browser applies CSS rules based on the page's markup, class names, and viewport width. .hero aligns the text and image frame. .steps::before draws a connector behind the numbered steps, and .feature-grid arranges the cards in four equal columns. .ready-start layers a gradient over its  background image. At widths of 768px or less, the hero image frame changes from 400px to 300px tall.
+   F. Important data structure in class/methods
+    This stylesheet uses no custom data structures. The homepage component supplies the content and image sources. Four :nth-child() selectors assign delays by slide position.
+   G. Briefly describe any algorithm that you may have used and why did you select it upon other algorithms where more than one option exists. 
+   I used Flexbox for the hero and planning steps because their elements are arranged in a row. I used CSS Grid for the feature  cards to align them across rows and columns. For matching .hero-slide elements, rotate-images defines a repeating 20-second opacity cycle. Staggered delays shift when each slide fades so the browser can animate the slides through CSS.
 
+*/
 .hero {
   display: flex;
   align-items: center;
@@ -325,6 +353,20 @@ body {
 }
 
 /* footer */
+/* Module 
+   A. Module Name : Footer Styles
+   B. Date Created:               Date Last Modified: November 13th 
+   C. Programmer: Gisselle Francisco 
+   D. Brief Description of Module
+      Styles the RoamReady footer text and navigation links with a dark green background, white text, and consistent spacing.
+   E. Important Functions and Components
+      The browser applies these rules to the footer markup. .footer places the text and link group at opposite ends of the row and aligns them vertically. .footer p removes the default paragraph margin. .footer-links adds a 24px gapbetween links, and .footer-links a styles the link text.
+   F. Important data structure in class/methods
+      None. The text and links are defined in the page markup.
+   G. Briefly describe any algorithm that you may have used and why did you select it upon other algorithms where more than one option exists. 
+      The footer uses no custom algorithm. I chose Flexbox because the footer text and links share a single row. A second flex container keeps the links evenly spaced within their group.
+
+*/
 .footer {
   background-color: #2F4538;
   color: white;
