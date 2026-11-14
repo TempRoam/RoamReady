@@ -1,6 +1,6 @@
 /**
  * Module ResetPasswordPage
- * Date   last updated: 11/13/2026
+ * Date   created on: 09/23/2026
  * Programmer Daniela Chavez
  *
 *d) Description: This works as the password recovery page. It uses the users 

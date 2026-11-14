@@ -2,7 +2,7 @@
  * a) b) c)
  * Module SignupPage
  * File   src/app/signup/page.tsx
- * Date  created on: last updated: 
+ * Date  created on: 09/23/2026
  * Programmer Daniela Chavez
  *
  *d) Description:

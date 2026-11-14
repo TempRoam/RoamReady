@@ -1,6 +1,6 @@
 /**
  * Module requestPasswordReset
- * Date last updated: 11/13/2026
+ * Date created on: 11/09/2026
  * Programmer Daniela Chavez
  *
 *d) Description:
