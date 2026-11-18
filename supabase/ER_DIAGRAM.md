@@ -91,9 +91,9 @@ erDiagram
 | :--- | :--- | :--- | :--- | :--- |
 | `public.profiles` | **Active (Week 1)** | `id` | `auth.users(id)` | Auto-created on Email & Google signup via `on_auth_user_created` trigger. |
 | `public.trips` | **Active (Week 1)** | `user_id` | `public.profiles(id)` | Enforces `end_date >= start_date`, indexed on `(user_id, start_date DESC)`. |
-| `public.itinerary_items` | **Planned (Week 2)** | `user_id` | `public.trips(id)` | **Single source of truth for Calendar & Itinerary views** (`start_time`, `end_time`, `category`). |
-| `public.checklist_items` | **Planned (Week 2)** | `user_id` | `public.trips(id)` | Supports Packing lists & pre-trip To-Dos per trip. |
-| `public.budget_entries` | **Planned (Week 2)** | `user_id` | `public.trips(id)` | Tracks estimated or actual expenses (`numeric(10,2)`, non-negative). |
+| `public.itinerary_items` | **Active (Week 2)** | `user_id` | `public.trips(id)` | **Single source of truth for Calendar & Itinerary views** (`start_time`, `end_time`, `category`). |
+| `public.checklist_items` | **Active (Week 2)** | `user_id` | `public.trips(id)` | Supports Packing lists & pre-trip To-Dos per trip. |
+| `public.budget_entries` | **Active (Week 2)** | `user_id` | `public.trips(id)` | Tracks estimated or actual expenses (`numeric(10,2)`, non-negative). |
 
 ---
 
