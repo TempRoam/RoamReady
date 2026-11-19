@@ -64,9 +64,9 @@ export default function Home() {
               Start Planning
             </Link>
 
-            <Link href="#why-roamready" className="explore-button">
+            <a href="#why-roamready" className="explore-button">
               Explore Features
-            </Link>
+            </a>
           </div>
         </div>
 
