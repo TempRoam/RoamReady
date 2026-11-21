@@ -74,6 +74,7 @@ export default function ItineraryPage() {
                         <span>SUN</span>
                         <strong>May 16</strong>
                     </div>
+                </section>
 
                     {/*Daily Itinerary*/}
                     <section className="daily-itinerary">
@@ -106,7 +107,7 @@ export default function ItineraryPage() {
                                     <div className="activity-details">
                                         <h3>Senso-ji Temple</h3>
                                         <p className="activity-location">Asakusa</p>
-                                        <p className="activity description">Explore Tokyo's oldest and most famous temple, with its historic streets and vibrant atmosphere.</p>
+                                        <p className="activity-description">Explore Tokyo's oldest and most famous temple, with its historic streets and vibrant atmosphere.</p>
                                     </div>
 
                                     <span className="activity-category culture">Culture</span>
@@ -115,7 +116,7 @@ export default function ItineraryPage() {
                             
                             {/*Activity 2*/}
                             <li className="timeline-item">
-                                <time className="activity-time" dateTime="2027-05-12T09:00">12:00 PM</time>
+                                <time className="activity-time" dateTime="2027-05-12T12:00">12:00 PM</time>
                                 <span className="timeline-maker" aria-hidden="true"/>
 
                                 <article className="activity-card">
@@ -123,16 +124,16 @@ export default function ItineraryPage() {
                                     <div className="activity-details">
                                         <h3>Lunch at Tsukiji</h3>
                                         <p className="activity-location">Tsukiji Outer Maket</p>
-                                        <p className="activity description">Enjoy fresh seafood and local favorites at Tokyo's iconic market.</p>
+                                        <p className="activity-description">Enjoy fresh seafood and local favorites at Tokyo's iconic market.</p>
                                     </div>
 
-                                    <span className="activity-category culture">Food</span>
+                                    <span className="activity-category food">Food</span>
                                 </article>
                             </li>
                             {/*Activity 3*/}
                             
                             <li className="timeline-item">
-                                <time className="activity-time" dateTime="2027-05-12T09:00">3:00 PM</time>
+                                <time className="activity-time" dateTime="2027-05-12T15:00">3:00 PM</time>
                                 <span className="timeline-maker" aria-hidden="true"/>
 
                                 <article className="activity-card">
@@ -140,15 +141,14 @@ export default function ItineraryPage() {
                                     <div className="activity-details">
                                         <h3>Explore Shibuya</h3>
                                         <p className="activity-location">Shibuya Crossing</p>
-                                        <p className="activity description">Experience Tokyo's most famous intersection and vibrant shopping district.</p>
+                                        <p className="activity-description">Experience Tokyo's most famous intersection and vibrant shopping district.</p>
                                     </div>
 
-                                    <span className="activity-category culture">Sightseeing</span>
+                                    <span className="activity-category sightseeing">Sightseeing</span>
                                 </article>
                             </li>
                         </ol>
                     </section>
-                </section>
             </div>
 
             {/*Side bar*/}
@@ -200,7 +200,6 @@ export default function ItineraryPage() {
                     <img className="route-map" src="/images/tokyo-map.jpg"/>
                 </section>
             </aside>
-
         </div>
         </main>
     );

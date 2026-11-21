@@ -118,6 +118,28 @@
 }
 
 /*Day cards*/
+/*Current cards*/
+.day-tab-current{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-height: 68px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.day-tab-current span {
+  font-size: 12px;
+}
+
+.day-tab-current strong {
+  font-size: 18px;
+}
+
 .trip-days {
     display: grid;
     grid-template-columns: repeat(5, minmax(0,1fr));
@@ -240,7 +262,7 @@
     white-space: nowrap;
 }
 
-.timeline-marker{
+.timeline-maker{
     position: relative;
     z-index: 1;
     width: 18px;
@@ -252,12 +274,12 @@
 }
 
 /*Activity Cards*/
-.activity-card.activity-card {
+.activity-card {
   display: grid;
   grid-template-columns: 120px minmax(0, 1fr);
   align-items: start;
   gap: 16px;
-  padding: 8px;
+  padding: 20px;
   border: 1px solid #e1e6e4;
   border-radius: 10px;
 }
@@ -294,6 +316,7 @@
 }
 
 .activity-category {
+  display: inline-block;
   margin-top: 6px;
   padding: 8px 12px;
   border-radius: 30px;
@@ -315,6 +338,11 @@
 .sightseeing {
   color: #2464a3;
   background-color: #e6f1ff;
+}
+
+.daily-itinerary{
+  background-color: #fff;
+  border-radius: 5px;
 }
 
 /* 6. Trip overview */
