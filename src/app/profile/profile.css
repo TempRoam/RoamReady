@@ -1,0 +1,58 @@
+.profile-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    box-sizing: border-box;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+}
+
+.profile-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-picture input  {
+    width: 91px;
+}
+
+input {
+    border: 1px solid black;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-buttons {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-left: 20px;
+    padding: 10px;
+}
+.button {
+    width: 100px;
+}
+
+.button:hover {
+    background-color: lightgreen;
+    color: darkgreen;
+    border-radius: 5px;
+}

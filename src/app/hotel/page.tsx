@@ -67,20 +67,32 @@ export default function hotelpage() {
                             <h2>Hotel Recommendations:</h2>
                            
                             <article className="recommendation-grid">
-                                <img src="/images/JapanHotel1.jpg" alt="Hotel 1" />
-                                <div className="recommendation-content">
-                                    <h3>Hotel 1</h3>
+                                <div className="hotel-cards">
+                                    <img src="/images/JapanHotel1.jpg" alt="Hotel 1" />
+                                    <div className="recommendation-content">
+                                        <h3>Hotel 1</h3>
+                                        <p>5 stars hotel</p>
+                                        <Link href="">Explore Hotels →</Link>
+                                    </div>
                                 </div>
                                
-                                <img src="/images/JapanHotel2.jpg" alt="Hotel 2" />
-                                <div className="recommendation-content">
-                                    <h3>Hotel 2</h3>
+                                <div className="hotel-cards">
+                                    <img src="/images/JapanHotel2.jpg" alt="Hotel 2" />
+                                    <div className="recommendation-content">
+                                        <h3>Hotel 2</h3>
+                                        <p>4 stars hotel</p>
+                                        <Link href="">Explore Hotels →</Link>
+                                    </div>
                                 </div>
 
 
-                                <img src="/images/JapanHotel3.jpg" alt="Hotel 3" />
-                                <div className="recommendation-content">
-                                    <h3>Hotel 3</h3>
+                                <div className="hotel-cards">
+                                    <img src="/images/JapanHotel3.jpg" alt="Hotel 3" />
+                                    <div className="recommendation-content">
+                                        <h3>Hotel 3</h3>
+                                        <p>3 stars hotel</p>
+                                        <Link href="">Explore Hotels →</Link>
+                                    </div>
                                 </div>
                             </article>
 
@@ -88,8 +100,6 @@ export default function hotelpage() {
                         </section>
                         <button type = "button"> More Details </button>
                         </div>
-                       
-                       
                     </article>
 
 
@@ -99,9 +109,45 @@ export default function hotelpage() {
                         <div className="hotel-content">
                             <h1>Hotels in France </h1>
                             <p>Features 2 bedrooms, great dining, and exceptional service.</p>
+
+                            {/*GRID FOR HOTEL RECOMMENDATIONS*/}
+                            <section className="hotelrecommendation">
+                            <h2>Hotel Recommendations:</h2>
+                           
+                            <article className="recommendation-grid">
+                                <div className="hotel-cards">
+                                    <img src="/images/JapanHotel1.jpg" alt="Hotel 1" />
+                                    <div className="recommendation-content">
+                                        <h3>Hotel 1</h3>
+                                        <p>5 stars hotel</p>
+                                        <Link href="">Explore Hotels →</Link>
+                                    </div>
+                                </div>
+                               
+                                <div className="hotel-cards">
+                                    <img src="/images/JapanHotel2.jpg" alt="Hotel 2" />
+                                    <div className="recommendation-content">
+                                        <h3>Hotel 2</h3>
+                                        <p>4 stars hotel</p>
+                                        <Link href="">Explore Hotels →</Link>
+                                    </div>
+                                </div>
+
+
+                                <div className="hotel-cards">
+                                    <img src="/images/JapanHotel3.jpg" alt="Hotel 3" />
+                                    <div className="recommendation-content">
+                                        <h3>Hotel 3</h3>
+                                        <p>3 stars hotel</p>
+                                        <Link href="">Explore Hotels →</Link>
+                                    </div>
+                                </div>
+                            </article>
+                        </section>
                             <button type = "button"> More Details </button>
                         </div>
                     </article>
+                
 
 
                     {/* Italy Hotel */}
@@ -110,6 +156,41 @@ export default function hotelpage() {
                         <div className="hotel-content">
                             <h1>Hotels in Italy </h1>
                             <p>Features 3 bedrooms, has great views, and best food service.</p>
+
+                            {/*GRID FOR HOTEL RECOMMENDATIONS*/}
+                            <section className="hotelrecommendation">
+                            <h2>Hotel Recommendations:</h2>
+                           
+                            <article className="recommendation-grid">
+                                <div className="hotel-cards">
+                                    <img src="/images/JapanHotel1.jpg" alt="Hotel 1" />
+                                    <div className="recommendation-content">
+                                        <h3>Hotel 1</h3>
+                                        <p>5 stars hotel</p>
+                                        <Link href="">Explore Hotels →</Link>
+                                    </div>
+                                </div>
+                               
+                                <div className="hotel-cards">
+                                    <img src="/images/JapanHotel2.jpg" alt="Hotel 2" />
+                                    <div className="recommendation-content">
+                                        <h3>Hotel 2</h3>
+                                        <p>4 stars hotel</p>
+                                        <Link href="">Explore Hotels →</Link>
+                                    </div>
+                                </div>
+
+
+                                <div className="hotel-cards">
+                                    <img src="/images/JapanHotel3.jpg" alt="Hotel 3" />
+                                    <div className="recommendation-content">
+                                        <h3>Hotel 3</h3>
+                                        <p>3 stars hotel</p>
+                                        <Link href="">Explore Hotels →</Link>
+                                    </div>
+                                </div>
+                            </article>
+                            </section>
                             <button type = "button"> More Details </button>
                         </div>
                     </article>
@@ -121,6 +202,41 @@ export default function hotelpage() {
                         <div className="hotel-content">
                             <h1>Hotels in Mexico </h1>
                             <p>Features 4 bedrooms, has a private pool, and is located near the beach.</p>
+
+                            {/*GRID FOR HOTEL RECOMMENDATIONS*/}
+                            <section className="hotelrecommendation">
+                            <h2>Hotel Recommendations:</h2>
+                           
+                            <article className="recommendation-grid">
+                                <div className="hotel-cards">
+                                    <img src="/images/JapanHotel1.jpg" alt="Hotel 1" />
+                                    <div className="recommendation-content">
+                                        <h3>Hotel 1</h3>
+                                        <p>5 stars hotel</p>
+                                        <Link href="">Explore Hotels →</Link>
+                                    </div>
+                                </div>
+                               
+                                <div className="hotel-cards">
+                                    <img src="/images/JapanHotel2.jpg" alt="Hotel 2" />
+                                    <div className="recommendation-content">
+                                        <h3>Hotel 2</h3>
+                                        <p>4 stars hotel</p>
+                                        <Link href="">Explore Hotels →</Link>
+                                    </div>
+                                </div>
+
+
+                                <div className="hotel-cards">
+                                    <img src="/images/JapanHotel3.jpg" alt="Hotel 3" />
+                                    <div className="recommendation-content">
+                                        <h3>Hotel 3</h3>
+                                        <p>3 stars hotel</p>
+                                        <Link href="">Explore Hotels →</Link>
+                                    </div>
+                                </div>
+                            </article>
+                            </section>
                             <button type = "button"> More Details </button>
                         </div>
                     </article>
