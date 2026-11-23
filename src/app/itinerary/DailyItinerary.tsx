@@ -12,9 +12,9 @@ const WEEKDAYS = ["Sun", "Mon", "Tues", "Wed", "Thu", "Fri", "Sat"];
 // the activities given in calendar events
 
 const calendarEvents = [
-    { id: "senso-ji", date: "2027-05-12", time: "9:00am", title: "Senso-ji Temple", category "culture" },
-    { id: "tsukiji", date: "2027-05-12", time: "1:00pm", title: "Lunch date at Tsukiji", category "food" },
-    { id: "shibuya", date: "2027-05-12", time: "3:00pm", title: "Explore Shibuya", category "sightseeing" },
+    { id: "senso-ji", date: "2027-05-12", time: "9:00am", title: "Senso-ji Temple", category: "culture" },
+    { id: "tsukiji", date: "2027-05-12", time: "1:00pm", title: "Lunch date at Tsukiji", category: "food" },
+    { id: "shibuya", date: "2027-05-12", time: "3:00pm", title: "Explore Shibuya", category: "sightseeing" },
 ];
 
 // Converts a number into a two-digit string.
