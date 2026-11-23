@@ -1,19 +1,23 @@
-// Activity data for the itinerary page.
-// The shape matches the itinerary_items table (start_time, title, location,
-// category, notes), so later this array can be replaced by a Supabase query.
-
+//this will store the activity info that is used on the itnerary page
+//the data is written here, but later should be gotten from supabase
+//the categories belong to an activity
+//each activity is under one of these 3
 export type Category = "culture" | "food" | "sightseeing";
 
+//this is what info each activity needs to have.
 export type Activity = {
-  id: string;
-  start: string; // local date and time written as "YYYY-MM-DDTHH:MM"
-  title: string;
-  location: string;
-  description: string;
-  image: string;
-  category: Category;
+  id: string; // this is to idneftiy each activity, unique ID
+  start: string; // the date and satrt time of the activity (ex: YYYY(YEAR)-MM(MONTH)-DD(DAY)T(seperates the date from the time)HH(hour 09 = 9am)MM(minutes 00=0mins)
+  title: string; // nameof the activity
+  location: string; //where the activity will be
+  description: string; // the short info of the activity
+  image: string; // path to activities image
+  category: Category; // category used to organize and style the activity
 };
 
+//list of activites displayed on the page
+// each activity follows the type from above 
+// 3 examples given below
 export const activities: Activity[] = [
   {
     id: "senso-ji",
