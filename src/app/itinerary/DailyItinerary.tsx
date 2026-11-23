@@ -48,27 +48,7 @@ export default function DailyItinerary() {
   // This makes sure the calendar always has complete rows of 7 days.
   while (cells.length % 7 !== 0) cells.push(null);
 
-               { /* This is what was moved from page.tsx */ }
-
-                           { /* ORIGINAL FROM PAGE.TSX 
-                            
-                            <h2 id="daily-title">Wednesday, May 12</h2> 
-
-                            <div className="itinerary-actions">
-                                <div className="view-options">
-                                    <button type="button" className="view-button selected" aria-pressed="true" disabled>
-                                        List
-                                    </button>
-                                    <button type="button" className="view-button" aria-pressed="false" disabled>
-                                        Calendar 
-                                    </button>
-                                </div>
-                                <button type="button" className="add-activity-button" disabled>
-                                    + Add activity
-                                </button>
-                            </div>
-                        </div> */ }
-
+               // This is what was moved from page.tsx
                          return (
                     <section className="daily-itinerary">
                         <div className="itinerary-toolbar">
@@ -94,23 +74,6 @@ export default function DailyItinerary() {
                             
                            { /* Activity 1 */ }
 
-                           { /*}
-                            <li className="timeline-item">
-                                <time className="activity-time" dateTime="2027-05-12T09:00">9:00 AM</time>
-                                <span className="timeline-maker" aria-hidden="true"/>
-
-                                <article className="activity-card">
-                                    <img className="activity-image" src="/images/senso-ji.jpg" alt="Senso-ji Temple"/>
-                                    <div className="activity-details">
-                                        <h3>Senso-ji Temple</h3>
-                                        <p className="activity-location">Asakusa</p>
-                                        <p className="activity-description">Explore Tokyo's oldest and most famous temple, with its historic streets and vibrant atmosphere.</p>
-                                    </div>
-
-                                    <span className="activity-category culture">Culture</span>
-                                </article>
-                            </li> */ }
-
                               <li className="timeline-item">
                                 <time className="activity-time" dateTime="2027-05-12T09:00">9:00 AM</time>
                                 <span className="timeline-maker" aria-hidden="true"/>
@@ -128,22 +91,6 @@ export default function DailyItinerary() {
                             </li>
                             
                             { /* Activity 2 */ }
-                            { /*
-                            <li className="timeline-item">
-                                <time className="activity-time" dateTime="2027-05-12T12:00">12:00 PM</time>
-                                <span className="timeline-maker" aria-hidden="true"/>
-
-                                <article className="activity-card">
-                                    <img className="activity-image" src="/images/tsukiji-market.jpg" alt="Tsukiji-market"/>
-                                    <div className="activity-details">
-                                        <h3>Lunch at Tsukiji</h3>
-                                        <p className="activity-location">Tsukiji Outer Maket</p>
-                                        <p className="activity-description">Enjoy fresh seafood and local favorites at Tokyo's iconic market.</p>
-                                    </div>
-
-                                    <span className="activity-category food">Food</span>
-                                </article>
-                            </li> */ }
 
                                <li className="timeline-item">
                                 <time className="activity-time" dateTime="2027-05-12T12:00">12:00 PM</time>
@@ -163,28 +110,6 @@ export default function DailyItinerary() {
                             
                             { /* Activity 3 */ }
 
-                            { /*
-                            <li className="timeline-item">
-                                <time className="activity-time" dateTime="2027-05-12T15:00">3:00 PM</time>
-                                <span className="timeline-maker" aria-hidden="true"/>
-
-                                <article className="activity-card">
-                                    <img className="activity-image" src="/images/Shibuya.jpg" alt="Shibuya Crossing"/>
-                                    <div className="activity-details">
-                                        <h3>Explore Shibuya</h3>
-                                        <p className="activity-location">Shibuya Crossing</p>
-                                        <p className="activity-description">Experience Tokyo's most famous intersection and vibrant shopping district.</p>
-                                    </div>
-
-                                    <span className="activity-category sightseeing">Sightseeing</span>
-                                </article>
-                            </li>
-                        </ol>
-                    </section>
-            </div> 
-
-            */ }
-
              <li className="timeline-item">
                                 <time className="activity-time" dateTime="2027-05-12T15:00">3:00 PM</time>
                                 <span className="timeline-maker" aria-hidden="true"/>
@@ -201,11 +126,15 @@ export default function DailyItinerary() {
                                 </article>
                             </li>
                         </ol>
+                         ) : (
 
-            { /* END OF WHAT WAS MOVED FROM PAGE.TSX */ }
+           
 
-             
-                        ) : (
+
+
+
+
+
                         <div className="calendar">
                             <div className="calendar-weekdays">
                                 {WEEKDAYS.map((d) => (
