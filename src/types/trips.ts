@@ -132,6 +132,59 @@ export interface UpdateTripInput {
   description?: string | null;
 }
 
+export interface CreateItineraryItemInput {
+  trip_id: string;
+  title: string;
+  location?: string | null;
+  category?: ItineraryCategory | string | null;
+  start_time: string;
+  end_time?: string | null;
+  notes?: string | null;
+  sort_order?: number;
+}
+
+export interface UpdateItineraryItemInput {
+  title?: string;
+  location?: string | null;
+  category?: ItineraryCategory | string | null;
+  start_time?: string;
+  end_time?: string | null;
+  notes?: string | null;
+  sort_order?: number;
+}
+
+export interface CreateChecklistItemInput {
+  trip_id: string;
+  label: string;
+  category?: ChecklistCategory | string | null;
+  is_completed?: boolean;
+  sort_order?: number;
+}
+
+export interface UpdateChecklistItemInput {
+  label?: string;
+  category?: ChecklistCategory | string | null;
+  is_completed?: boolean;
+  sort_order?: number;
+}
+
+export interface CreateBudgetEntryInput {
+  trip_id: string;
+  category: BudgetCategory | string;
+  amount: number;
+  currency?: string;
+  note?: string | null;
+  entry_date?: string | null;
+}
+
+export interface UpdateBudgetEntryInput {
+  category?: BudgetCategory | string;
+  amount?: number;
+  currency?: string;
+  note?: string | null;
+  entry_date?: string | null;
+}
+
 export interface ActionResult<T> {
   data: T | null;
   error: string | null;

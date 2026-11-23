@@ -321,3 +321,21 @@ export async function deleteTrip(
 
   return { data: { id: data.id, deleted: true }, error: null };
 }
+
+// Re-export child collection Server Actions for unified backend import
+export {
+  getTripItinerary,
+  addItineraryItem,
+  updateItineraryItem,
+  deleteItineraryItem,
+  reorderItineraryItems,
+  getTripChecklist,
+  addChecklistItem,
+  toggleChecklistItem,
+  updateChecklistItem,
+  deleteChecklistItem,
+  getTripBudget,
+  addBudgetEntry,
+  updateBudgetEntry,
+  deleteBudgetEntry,
+} from './child-actions';
