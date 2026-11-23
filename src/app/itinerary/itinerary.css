@@ -223,6 +223,16 @@
     cursor: default;
 }
 
+/* D ADDED: List and Calendar buttons are clickable now */
+.view-button {
+    cursor: pointer;
+}
+
+.view-button:not(.selected):hover {
+    background-color: #dfe8da;
+}
+/* END OF ADDED */
+
 /*Timeline*/
 
 .activity-timeline {
@@ -345,6 +355,62 @@
   border-radius: 5px;
 }
 
+/* ADDED: Calendar view (shown instead of the timeline when Calendar is selected) */
+.calendar-weekdays,
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.calendar-weekdays {
+  margin-bottom: 6px;
+  text-align: center;
+  color: #667085;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.calendar-cell {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+  min-height: 88px;
+  padding: 8px;
+  border: 1px solid #e1e6e4;
+  border-radius: 8px;
+}
+
+.calendar-cell.empty {
+  border: none;
+}
+
+/* May 12-16, the trip days */
+.calendar-cell.in-trip {
+  background-color: #eef3ea;
+  border-color: #56845b;
+}
+
+.calendar-day {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Colors come from the existing .culture, .food and .sightseeing classes */
+.calendar-event {
+  display: block;
+  padding: 3px 6px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+/* END OF ADDED */
+
 /* 6. Trip overview */
 .trip-overview,
 .daily-route {
@@ -427,3 +493,17 @@
 }
 
 /*create @media for different screen sizes*/
+
+/* ADDED: smaller calendar cells on narrow screens */
+@media (max-width: 700px) {
+  .calendar-cell {
+    min-height: 64px;
+    padding: 4px;
+  }
+
+  .calendar-event {
+    font-size: 10px;
+  }
+}
+
+/* END OF ADDED */
