@@ -5,6 +5,10 @@
     height: 100vh;
 }
 
+.profile-form {
+    zoom: 1.4;
+}
+
 form {
     box-sizing: border-box;
     background-color: white;
