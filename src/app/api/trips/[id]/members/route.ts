@@ -22,6 +22,13 @@ const removeMemberSchema = z
   })
   .strict();
 
+ const updateMemberSchema = z
+  .object({
+    user_id: z.uuid(),
+    role: z.enum(["viewer", "editor"]),
+  })
+  .strict(); 
+
 function errorResponse(code: string, message: string, status: number) {
   return NextResponse.json(
     {
@@ -240,6 +247,83 @@ export async function POST(
   }
 
   return successResponse(data, 201);
+}
+
+export async function PATCH(
+  request: Request,
+  context: MembersRouteContext,
+) {
+  const { id } = await context.params;
+
+  if (!z.uuid().safeParse(id).success) {
+    return errorResponse("INVALID_ID", "Invalid trip ID.", 400);
+  }
+
+  const ownerContext = await getOwnerContext(id);
+
+  if ("error" in ownerContext) {
+    return ownerContext.error;
+  }
+
+  const { supabase } = ownerContext;
+
+  if (!request.headers.get("content-type")?.includes("application/json")) {
+    return errorResponse(
+      "UNSUPPORTED_MEDIA_TYPE",
+      "Content-Type must be application/json.",
+      415,
+    );
+  }
+
+  let body: unknown;
+
+  try {
+    body = await request.json();
+  } catch {
+    return errorResponse("INVALID_JSON", "Request body must be valid JSON.", 400);
+  }
+
+  const parsedBody = updateMemberSchema.safeParse(body);
+
+  if (!parsedBody.success) {
+    return errorResponse(
+      "VALIDATION_ERROR",
+      "Provide a valid user_id and role.",
+      400,
+    );
+  }
+
+  const { user_id, role } = parsedBody.data;
+
+  const { data, error } = await supabase
+    .from("trip_members")
+    .update({ role })
+    .eq("trip_id", id)
+    .eq("user_id", user_id)
+    .select("id, trip_id, user_id, role, created_at")
+    .maybeSingle();
+
+  if (error) {
+    if (error.code === "42501") {
+      return errorResponse(
+        "FORBIDDEN",
+        "You are not allowed to update members.",
+        403,
+      );
+    }
+
+    return errorResponse(
+      "DATABASE_ERROR",
+      "Unable to update trip member.",
+      500,
+    );
+  }
+
+  if (!data) {
+    return errorResponse("NOT_FOUND", "Trip member not found.", 404);
+  }
+
+  return successResponse(data);
 }
 
 export async function DELETE(
