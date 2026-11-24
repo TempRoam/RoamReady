@@ -19,6 +19,8 @@
 
 import Link from "next/link";
 import "./itinerary.css";
+import DailyItinerary from "./DailyItinerary"; //added for calendar
+import { activities } from "./activities"; //added for calendar
 
 export default function ItineraryPage() {
     return (
@@ -76,8 +78,11 @@ export default function ItineraryPage() {
                     </div>
                 </section>
 
-                    {/*Daily Itinerary*/}
-                    <section className="daily-itinerary">
+                    {/*Daily Itinerary, the toolbar, list view and calendar*/}
+                <DailyItinerary activities={activities} />
+            </div>
+               {/* going to move this to a seperate page so it could be edited to be functional
+                <section className="daily-itinerary">
                         <div className="itinerary-toolbar">
                             <h2 id="daily-title">Wednesday, May 12</h2>
 
@@ -96,8 +101,9 @@ export default function ItineraryPage() {
                             </div>
                         </div>
 
-                        <ol className="activity-timeline">
-                            {/*Activity 1*/}
+                        <ol className="activity-timeline">*/}
+                            {/*
+                            Activity 1
                             <li className="timeline-item">
                                 <time className="activity-time" dateTime="2027-05-12T09:00">9:00 AM</time>
                                 <span className="timeline-maker" aria-hidden="true"/>
@@ -114,7 +120,7 @@ export default function ItineraryPage() {
                                 </article>
                             </li>
                             
-                            {/*Activity 2*/}
+                            Activity 2
                             <li className="timeline-item">
                                 <time className="activity-time" dateTime="2027-05-12T12:00">12:00 PM</time>
                                 <span className="timeline-maker" aria-hidden="true"/>
@@ -130,7 +136,7 @@ export default function ItineraryPage() {
                                     <span className="activity-category food">Food</span>
                                 </article>
                             </li>
-                            {/*Activity 3*/}
+                            Activity 3
                             
                             <li className="timeline-item">
                                 <time className="activity-time" dateTime="2027-05-12T15:00">3:00 PM</time>
@@ -149,7 +155,7 @@ export default function ItineraryPage() {
                             </li>
                         </ol>
                     </section>
-            </div>
+            </div> */}
 
             {/*Side bar*/}
             <aside className="itinerary-sidebar" aria-label="Trip information">
