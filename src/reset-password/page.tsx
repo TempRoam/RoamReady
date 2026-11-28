@@ -1,3 +1,4 @@
+/* need to figure out why theres a seperate file outside of src for reset, theres already one so delete or resolve 
 "use client";
 
 import { FormEvent, useState } from "react";
@@ -47,4 +48,4 @@ export default function ResetPasswordPage() {
       </section>
     </main>
   );
-}
+} */
