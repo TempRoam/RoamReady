@@ -1,44 +1,16 @@
-"use client";
-
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import { supabase } from "@/lib/supabase";
-
-export default function Navbar() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  useEffect(() => {
-    checkUser();
-
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((_event, session) => {
-      setIsLoggedIn(Boolean(session));
-    });
-
-    return () => {
-      subscription.unsubscribe();
-    };
-  }, []);
-
-  async function checkUser() {
-    const {
-      data: { user },
-    } = await supabase.auth.getUser();
-
-    setIsLoggedIn(Boolean(user));
-  }
-
-  async function handleLogout() {
-    const { error } = await supabase.auth.signOut();
-
-    if (error) {
-      alert(error.message);
-      return;
-    }
-
-    window.location.href = "/login";
-  }
+//edited navbar for the log out to show wihtout having to run cmd r
+import Link from "next/link"
+import { cookies } from "next/headers"
+import { createClient } from "@/utils/supabase/server"
+import { logout } from "@/app/login/actions"
+// the server component reads the session from the cookies on every request.
+// The login and logout actions call revalidatePath('/', 'layout'), which makes this re-render, 
+// so the bar switches between Log In / Sign Up and Log Out without a manual refresh.
+export default async function Navbar() {
+  const supabase = createClient(await cookies())
+  const {
+    data: { user },
+  } = await supabase.auth.getUser()
 
   return (
     <nav className="navbar">
@@ -51,14 +23,12 @@ export default function Navbar() {
         <Link href="/about">About</Link>
         <Link href="/notifications">Notifications</Link>
 
-        {isLoggedIn ? (
-          <button 
-            type="button"
-            onClick={handleLogout}
-            className="signup-button"
-          >
-            Log Out
-          </button>  
+        {user ? (
+          <form action={logout}>
+            <button type="submit" className="signup-button">
+              Log Out
+            </button>
+          </form>
         ) : (
           <>
             <Link href="/login">Log In</Link>
@@ -69,5 +39,5 @@ export default function Navbar() {
         )}
       </div>
     </nav>
-  );
+  )
 }
