@@ -1,3 +1,4 @@
+/* not sure if this is needed, commented out to test
 "use client";
 
 import { FormEvent, useState } from "react";
@@ -58,3 +59,4 @@ export default function UpdatePasswordPage() {
     </main>
   );
 }
+  */
