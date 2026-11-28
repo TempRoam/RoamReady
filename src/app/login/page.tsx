@@ -27,17 +27,17 @@
  * google authentication server action, shared signup.module.css, shared submitbutton
  */
 
-import { login } from './actions'
+import { login, signInWithGoogle } from './actions' //both actions now live in ./actions.ts
 import Link from 'next/link'; //forgot pass added + line 30
 //resuing styles and button from sign up
 //the login process happens in the login server action in ./action.ts
-import { signInWithGoogle } from '../auth/actions' 
 import styles from '../signup/signup.module.css' 
 import SubmitButton from '../signup/SubmitButton' 
 
-export default async function LoginPage(props: { searchParams: Promise<{ error?: string }> }) {
+export default async function LoginPage(props: { searchParams: Promise<{ error?: string; message?: string }> }) {
     const searchParams = await props.searchParams
     const errorMessage = searchParams?.error //reading without await would throw an error
+    const infoMessage = searchParams?.message //success message, ex: "check your email" after signing up
     //code changed to similar to signup but use autoComplete so the browser can offer to fill it in(or hopefully suggest something for the user)
     //no fullName since its not signing up, its logging in 
     return (
@@ -45,6 +45,7 @@ export default async function LoginPage(props: { searchParams: Promise<{ error?:
         <main className={styles.page}>
           <h1 className={styles.title}>Log in</h1>
 
+          {infoMessage && ( <p className={styles.success} role="status">{infoMessage}</p> ) }
           {errorMessage && ( <p className={styles.error} role="alert">{errorMessage}</p> ) }
 
           <form action={login} className={styles.form}>
@@ -54,7 +55,7 @@ export default async function LoginPage(props: { searchParams: Promise<{ error?:
 
              <label htmlFor="password" className={styles.label}>Password</label>
             <input id="password" type="password" name="password" placeholder=" enter password" required
-            autoComplete="current password" className={styles.input} />
+            autoComplete="current-password" className={styles.input} />
             
             <Link href="/reset-password" className={styles.forgotLink}>Forgot password?</Link>
 
@@ -166,3 +167,6 @@ export default function LoginPage() {
   );
 }
   */
+
+
+
